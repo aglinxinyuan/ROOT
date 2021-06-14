@@ -1,0 +1,201 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #FFFFFF;
+}
+
+.welcome-box {
+    width: 100%;
+    max-width: 330px;
+    padding: 30px;
+    margin: 0 auto;
+
+    font-weight: 1800;
+    font-size: 20px;
+}
+
+.welcome-box .credential-box {
+    position: relative;
+    top: 25px;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+
+}
+.welcome-box .credential-box:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.welcome-box .credential-box input[type="text"] {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    margin: 1px 0;
+    outline: none;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    background-color:#F1F1F1;
+
+}
+.welcome-box .credential-box input[type="password"] {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    margin: 1px 0;
+    outline: none;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    background-color:#F1F1F1;
+}
+
+
+.welcome-box .credential-box input[type="text"] {
+    padding-left: 50px;
+}
+
+.welcome-box .credential-box input[type="password"] {
+    padding-left: 50px;
+}
+
+
+.welcome-box .credential-box input[type="text"]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.welcome-box .credential-box input[type="password"]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.welcome-box .credential-box i {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    padding: 18px 28px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+
+.welcome-box .credential-box input[type="text"]:focus + i {
+    color: dodgerBlue;
+}
+
+.welcome-box .credential-box input[type="password"]:focus + i {
+    color: dodgerBlue;
+}
+
+
+
+.welcome-box .Login-button {
+    position: relative;
+    /*left: 50%;*/
+    /*top: 90%;*/
+    top: 65px;
+    left: 165px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+
+.welcome-box .SignUp-button {
+    position: relative;
+    /*left: 50%;*/
+    /*top: 90%;*/
+    top: 45px;
+    left: 125px;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    font-size: 12px;
+    color:gray;
+}
+
+
+.btn1{
+    border: none;
+    margin:  1px 200px;
+    font-size: 12px;
+    width: 140px;
+    color:gray;
+    background-color: white;
+
+}
+
+.btn1:hover{
+    color:black;
+}
+
+
+.btn2{
+    border: none;
+    margin:  20px;
+    padding: 10px;
+    width: 220px;
+    font-family: "monsterrat", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor:pointer;
+    color:#fff;
+    border-radius: 28px;
+    background-size: 200%;
+}
+
+
+.btn2{
+    background-image: linear-gradient(to left,#EE5A24,#FFC312,#EE5A24)
+}
+
+.btn2:hover{
+    background-position:right;
+}
+
+.btn3{
+    border: none;
+    margin:  1px 120px;
+    font-size: 12px;
+    width: 170px;
+    color:gray;
+    background-color: white;
+
+}
+
+.btn3:hover{
+    color:black;
+}
+
+
+.btn4{
+    border: none;
+    margin:  50px 90px;
+    font-size: 12px;
+    width: 140px;
+    color:gray;
+    background-color: white;
+
+}
+
+
+.btn4:hover{
+    color:black;
+}
+
