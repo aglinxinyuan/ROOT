@@ -1,0 +1,111 @@
+<!-- This page will be seen if you logged in -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="index.html.css">
+    <script src="https://kit.fontawesome.com/f54dbe4fa3.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<body>
+<div class = "welcome-box">
+
+
+
+    <div class = "Hyperlink-button">
+        <A HREF="signup.html"> Back </A>
+    </div>
+
+    <h1>Personal Info</h1>
+
+    <div class="container">
+        <a href = "" class="btn number_btn">&#10003;</a>
+        <a href = "" class="btn number_btn">2</a>
+        <a href = "" class="btn number_btn">3</a>
+        <a href = "" class="btn number_btn">4</a>
+    </div>
+
+    <div class = "profile-pic-div">
+        <img src="profile.jpg" alt width = "201" height = "188"/>
+        <input type="file" id ="file">
+        <label for = "file" id="uploadBtn"> Choose Photo</label>
+    </div>
+
+    <div class = "credential-box">
+        <input name="school_email" placeholder="Enter your school email address" type="text">
+        <i class="fas fa-envelope"></i>
+    </div>
+
+    <div class = "credential-box">
+        <input name="school" placeholder="School" type="password">
+        <i class="fas fa-user-graduate"></i>
+    </div>
+
+    <div class = "credential-box">
+        <input name="major" placeholder="Major" type="password">
+        <i class="fas fa-book"></i>
+    </div>
+
+
+
+
+
+    <form action="verification.html">
+    <div class = "Progress-button">
+        <button class="btn pro_btn" type="submit">Next Step</button>
+    </div>
+    </form>
+
+
+    <div class = "Hyperlink-button" >
+        <p style="text-align:center">
+            Already have an account?<A HREF="index.html"> Sign in! </A>
+        </p>
+
+    </div>
+
+
+
+</div>
+
+
+<div class = "bg-modal">
+    <div class = "terms">
+        <div class="close">+</div>
+
+        <p style="text-align:center">
+        <br>
+        <br>
+        Terms and Conditions
+        <br>
+        balabalabalabalabalabala
+        </p>
+
+
+        <div class = "Progress-button">
+            <button class="btn pro_btn" type="submit">Agree</button>
+        </div>
+
+
+
+        <script>
+            document.querySelector('.close').addEventListener('click', function(){
+                document.querySelector('.bg-modal').style.display='none';
+            });
+
+        </script>
+
+
+
+    </div>
+</div>
+
+
+</body>
+
+
+</html>
