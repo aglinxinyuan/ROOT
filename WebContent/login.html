@@ -3,27 +3,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login to Fablix</title>
+    <title>Login to Ez-cross</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/f54dbe4fa3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<h2>Login to Fablix</h2>
-<!-- Set the method to POST to avoid showing the username/password in the URL
-     The default action is disabled to allow your own implementation. -->
-<form id="login_form" method="post" action="#">
-    <label><b>Username</b></label>
-    <label>
-        <input name="username" placeholder="Enter Username" type="text">
-    </label>
-    <br>
-    <label><b>Password</b></label>
-    <label>
-        <input name="password" placeholder="Enter Password" type="password">
-    </label>
-    <br>
-    <input type="submit" value="Login">
-</form>
 
-<div id="login_error_message"></div>
+<div class = "welcome-box">
+    <h1>Welcome Back!</h1>
+    <br>
+    <img src="login.png" alt width = "331" height = "188"/>
+
+    <form id ="login_form" class = "Credential" action="#" method="post">
+        <div class = "credential-box">
+            <input name="username" placeholder="School Email" type="text" id="username">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+
+        <div class = "credential-box">
+            <input name="password" placeholder="Password" type="password" id = "password">
+            <i class="fas fa-unlock-alt" aria-hidden="true"></i>
+        </div>
+
+        <br>
+
+        <div class = "Forget-button">
+            <button class="btn btn1" type="submit">Forgot password?</button>
+        </div>
+
+        <div class = "Progress-button">
+            <button class="btn pro_btn" type="submit">Login</button>
+        </div>
+        <br>
+
+
+        <br>
+    </form>
+    <div class = "Hyperlink-button" >
+        <p style="text-align:center">
+            Not a member yet?<A HREF="signup.html"> Sign up! </A>
+        </p>
+    </div>
+    <div class = "Gray-button">
+        <button class="btn btn4" type="submit">Continue as guest</button>
+    </div>
+    <div id="login_error_message"></div>
+
+</div>
+
+
 
 <!-- include jQuery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
