@@ -36,6 +36,15 @@ body {
     color: #979797;
 }
 
+.box {
+    height:700px;
+    width: 100%;
+    max-width: 330px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
 .title {
     font-family: "Poppins-Black", serif;
     color: #22343D;
@@ -56,14 +65,7 @@ body {
     margin-bottom:40px;
 }
 
-.form {
-    height:700px;
-    width: 100%;
-    max-width: 330px;
-    padding: 30px;
-    margin: 0 auto;
-    background-color: #ffffff;
-}
+
 
 .form-control {
     position: relative;
