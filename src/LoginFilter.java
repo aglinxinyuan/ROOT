@@ -51,7 +51,12 @@ public class LoginFilter implements Filter {
         allowedURIs.add("login.js");
         allowedURIs.add("login.css");
         allowedURIs.add("img/login.png");
+        allowedURIs.add("img/email.png");
+        allowedURIs.add("img/password.png");
         allowedURIs.add("api/login");
+        allowedURIs.add("font/PingFang-SC-Bold.ttf");
+        allowedURIs.add("font/Poppins-Black.ttf");
+        allowedURIs.add("font/Poppins-SemiBold.ttf");
     }
 
     public void destroy() {
