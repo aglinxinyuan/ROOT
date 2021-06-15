@@ -1,5 +1,20 @@
-html,
-body {
+@font-face {
+    font-family:"PingFang SC Medium";
+    src: url("font/PingFang-SC-Bold.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family:"Poppins-Black";
+    src: url("font/Poppins-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"Poppins-SemiBold";
+    src: url("font/Poppins-SemiBold.ttf") format("truetype");
+}
+
+html, body {
     height: 100%;
 }
 
@@ -15,95 +30,95 @@ body {
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #FFFFFF;
+    background-color: #eaeaea;
+    text-align: center;
+    font-family: "PingFang SC Medium", serif;
+    color: #979797;
 }
 
-.welcome-box {
+.title {
+    font-family: "Poppins-Black", serif;
+    color: #22343D;
+    font-size: 26px;
+    padding-top:70px;
+    padding-bottom:40px;
+    text-align: left;
+}
+
+.credential {
+    padding-top: 22px;
+}
+
+.forgot {
+    color: #B1B1B1;
+    font-size: 11px;
+    float: right;
+    margin-bottom:40px;
+}
+
+.form-signin {
     width: 100%;
     max-width: 330px;
     padding: 30px;
     margin: 0 auto;
-
-    font-weight: 1800;
-    font-size: 20px;
+    background-color: #ffffff;
 }
 
-.welcome-box .credential-box {
+.form-signin .form-control {
     position: relative;
-    top: 25px;
     box-sizing: border-box;
     height: auto;
-    padding: 10px;
-    font-size: 16px;
-
-}
-.welcome-box .credential-box:focus {
-    border-color: dodgerBlue;
-    box-shadow: 0 0 8px 0 dodgerBlue;
-}
-.welcome-box .credential-box input[type="text"] {
-    width: 100%;
-    border: none;
-    border-radius: 18px;
-    margin: 1px 0;
-    outline: none;
-    padding: 25px;
-    box-sizing: border-box;
-    transition: 0.3s;
-    background-color:#F1F1F1;
-
-}
-.welcome-box .credential-box input[type="password"] {
-    width: 100%;
-    border: none;
-    border-radius: 18px;
-    margin: 1px 0;
-    outline: none;
-    padding: 25px;
-    box-sizing: border-box;
-    transition: 0.3s;
-    background-color:#F1F1F1;
+    padding: 20px;
+    font-size: 11px;
+    background-color: #F5F5F5;
+    color: #979797;
+    margin-top: 7px;
+    border-radius: 15px;
+    border:0;
+    margin-bottom:0;
 }
 
-
-.welcome-box .credential-box input[type="text"] {
-    padding-left: 50px;
+.form-control::placeholder {
+    color: #979797;
+    opacity: 1;
 }
 
-.welcome-box .credential-box input[type="password"] {
-    padding-left: 50px;
+.form-group .form-control {
+    padding-left:  65px;
 }
 
-
-.welcome-box .credential-box input[type="text"]:focus {
-    border-color: dodgerBlue;
-    box-shadow: 0 0 8px 0 dodgerBlue;
-}
-
-.welcome-box .credential-box input[type="password"]:focus {
-    border-color: dodgerBlue;
-    box-shadow: 0 0 8px 0 dodgerBlue;
-}
-
-.welcome-box .credential-box i {
+.form-group .form-control-icon {
     position: absolute;
-    left: 0;
-    top: 18px;
-    padding: 18px 28px;
-    color: #aaa;
-    transition: 0.3s;
+    padding-left: 25px;
+    padding-top: 23px;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+}
+
+.member {
+    margin-top: 20px;
+    color: #B1B1B1;
+    font-size: 11px;
+}
+
+.signup {
+    color: #7C7C7C;
+    text-decoration: underline;
 }
 
 
-.welcome-box .credential-box input[type="text"]:focus + i {
-    color: dodgerBlue;
+.orangeBtn {
+    border: none;
+    height: 35px;
+    width: 180px;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 16px;
+    color:#fff;
+    border-radius: 28px;
+    background-image: linear-gradient(45deg,#fd9568,#fece63);
+    box-shadow: 0 8px 2px -2px rgba(254, 211, 99, 0.5);
 }
-
-.welcome-box .credential-box input[type="password"]:focus + i {
-    color: dodgerBlue;
-}
-
-
 
 .welcome-box .Progress-button {
     position: relative;

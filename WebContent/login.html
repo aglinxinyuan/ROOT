@@ -4,58 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Login to Ez-cross</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="login.css">
-    <script src="https://kit.fontawesome.com/f54dbe4fa3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<div class = "welcome-box">
-    <h1>Welcome Back!</h1>
-    <br>
-    <img src="login.png" alt width = "331" height = "188"/>
 
-    <form id ="login_form" class = "Credential" action="#" method="post">
-        <div class = "credential-box">
-            <input name="username" placeholder="School Email" type="text" id="username">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+    <form class="form-signin" id="login_form" action="#" method="post">
+        <div class="title">Welcome Back!</div>
+        <img src="img/login.png" width = 100% alt="">
+        <div class="credential">
+            <div class="form-group">
+                <img class ="form-control-icon" src="img/email.png" height = 35 alt="">
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input name="email" type="email" id="inputEmail" class="form-control" placeholder="School Email" required="" autofocus="">
+            </div>
+            <div class="form-group">
+                <img class ="form-control-icon" src="img/password.png" height = 35 alt="">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            </div>
+            <div><a class="forgot" HREF="forgot.html">Forgot password?</a></div>
         </div>
+        <button class="btn orangeBtn" type="submit">Login</button>
 
-        <div class = "credential-box">
-            <input name="password" placeholder="Password" type="password" id = "password">
-            <i class="fas fa-unlock-alt" aria-hidden="true"></i>
-        </div>
-
-        <br>
-
-        <div class = "Forget-button">
-            <button class="btn btn1" type="submit">Forgot password?</button>
-        </div>
-
-        <div class = "Progress-button">
-            <button class="btn pro_btn" type="submit">Login</button>
-        </div>
-        <br>
-
-
-        <br>
+        <div class="member">Not a member yet?<a class ="signup" HREF="signup.html">Sign up</a></div>
+        <div id="login_error_message"></div>
     </form>
-    <div class = "Hyperlink-button" >
-        <p style="text-align:center">
-            Not a member yet?<A HREF="signup.html"> Sign up! </A>
-        </p>
-    </div>
-    <div class = "Gray-button">
-        <button class="btn btn4" type="submit">Continue as guest</button>
-    </div>
-    <div id="login_error_message"></div>
 
-</div>
-
-
-
-<!-- include jQuery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- include our own JS file -->
 <script src="./login.js"></script>
 
 </body>
