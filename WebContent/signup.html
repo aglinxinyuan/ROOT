@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="box" id="login_form" action="#" method="post">
-        <a HREF="signup.html"><img class ="back" src="img/back.png" height = 15 alt=""></a>
-        <div class="title mt-5 mb-5 pt-4">Sign Up</div>
+    <form class="box" id="signup_form" action="#" method="post" oninput='confirm.setCustomValidity(confirm.value !== password.value ? "Passwords do not match." : "")'>
+        <a HREF="signup.html"><img class ="back" src="img/back.png" height = 13 alt=""></a>
+        <div class="title mt-5 mb-3 pt-3">Sign Up</div>
         <img src="img/signup.png" width = 100% alt="">
-        <div class="form-group mt-4 pt-1">
+        <div class="form-group mt-3 pt-2">
             <img class ="form-control-icon" src="img/user.png" height = 35 alt="">
             <label for="name" class="sr-only">Name</label>
             <input name="name" type="text" id="name" class="form-control" placeholder="Name" required="">
@@ -38,15 +38,49 @@
             <input name="confirm" type="password" id="confirm" class="form-control" placeholder="Confirm Password" required="">
         </div>
 
-        <a class="forgot" HREF="forgot.html">Forgot password?</a>
-        <button class="btn orangeBtn" type="submit">Login</button>
+            <div class="form-check member back round mt-0 mb-4">
+            <input type="checkbox" id="checkbox" class="form-check-input" required/>
+            <label class="form-check-label" for="checkbox"></label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+
+                Agree to <a data-toggle="modal" data-target="#ModalLong"><nobr class="signup">Terms & Conditions </nobr></a>
+            </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="ModalLong" tabindex="-1" role="dialog" aria-labelledby="Term" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="Term">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <button class="btn orangeBtn" type="submit">Next Step</button>
 
         <div class="member">Already have an account? <a class ="signup" HREF="login.html">Sign in</a></div>
         <div id="login_error_message"></div>
     </form>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./login.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="./login.js"></script>
 
 </body>
 </html>

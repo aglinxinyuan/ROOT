@@ -101,7 +101,7 @@ body {
 .orangeBtn {
     border: none;
     height: 35px;
-    width: 180px;
+    width: 190px;
     font-family: "Poppins-SemiBold", sans-serif;
     font-size: 16px;
     color:#fff;
@@ -109,6 +109,43 @@ body {
     background-image: linear-gradient(45deg,#fd9568,#fece63);
     box-shadow: 0 8px 2px -2px rgba(254, 211, 99, 0.5);
 }
+
+
+
+
+.round label {
+    background-color: #fff;
+    border: 2px solid #707070;;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 17px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 17px;
+}
+
+.round label:after {
+    border: 2px solid #707070;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 5px;
+    left: 2px;
+    opacity: 0;
+    position: absolute;
+    top: 3px;
+    transform: rotate(-45deg);
+    width: 9px;
+}
+.round {position: relative;}
+.round input[type="checkbox"] {opacity: 0.3;}
+.round input[type="checkbox"]:checked + label {border-color: #707070;}
+.round input[type="checkbox"]:checked + label:after {opacity: 1;}
+
+
+
+
 
 
 .welcome-box .Progress-button {
