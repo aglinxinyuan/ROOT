@@ -1,61 +1,28 @@
-<!-- This page will be seen if you logged in -->
+<!-- This page will be redirected from any url if you are not logged in -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>Congratulation</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/f54dbe4fa3.js" crossorigin="anonymous"></script>
-
-
 </head>
-
-
 <body>
-<div class = "welcome-box">
+    <div class="box">
+        <a HREF="verification.html"><img class ="back" src="img/back.png" height = 13 alt=""></a>
+        <div class="title mt-5 mb-3 pt-3">Congrats!</div>
+        <img class="mb-3 pb-1" src="img/congratulation.png" width = 100% alt="">
 
+        <img  class="mt-2" src="img/happy.png" width = 65% alt="">
 
-
-    <div class = "Hyperlink-button">
-        <A HREF="verification.html"> Back </A>
+        <div class="semiSC my-5">Your account was successfully created!</div>
+        <a class="btn orangeBtn" HREF="login.html">Get Started</a>
     </div>
-
-    <h1>Congrats!</h1>
-
-    <div class="container">
-        <a href = "" class="btn number_btn">&#10003;</a>
-        <a href = "" class="btn number_btn">&#10003;</a>
-        <a href = "" class="btn number_btn">&#10003;</a>
-        <a href = "" class="btn number_btn">&#10003;</a>
-    </div>
-
-
-    <div class="centeredText">
-        <br>
-
-        <img src="congratulation.png" alt width = "331" height = "338"/>
-        <br>
-        Your account was successfully created!
-        <br>
-        <br>
-    </div>
-
-
-
-
-    <form  action="http://google.com" method="Get">
-        <div class = "Progress-button" >
-            <button class="btn pro_btn" type="submit">Get Started</button>
-        </div>
-    </form>
-
-
-
-
-</div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./login.js"></script>
 
 </body>
-
-
 </html>
