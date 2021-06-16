@@ -45,6 +45,10 @@ body {
     background-color: #fff;
 }
 
+.back{
+    float: left;
+}
+
 .title {
     font-family: "Poppins-Black", serif;
     color: #22343D;
