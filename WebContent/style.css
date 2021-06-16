@@ -2,7 +2,10 @@
     font-family:"PingFang SC Medium";
     src: url("font/PingFang-SC-Bold.ttf") format("truetype");
 }
-
+@font-face {
+    font-family:"PingFang SC SemiBold";
+    src: url("font/PingFang-SC-Semibold.ttf") format("truetype");
+}
 
 @font-face {
     font-family:"Poppins-Black";
@@ -47,13 +50,14 @@ body {
 
 .term {
     height: 100%;
-    max-height:600px;
+    min-height:600px;
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     padding: 30px;
     margin: 0 auto;
     background-color: #fff;
     text-align: center;
+    border-radius: 20px;
 }
 
 .back{
@@ -65,6 +69,12 @@ body {
     color: #22343D;
     font-size: 26px;
     text-align: left;
+}
+
+.termtitle {
+    font-family: "PingFang SC SemiBold", serif;
+    color: #606060;
+    font-size: 13px;
 }
 
 .forgot {
