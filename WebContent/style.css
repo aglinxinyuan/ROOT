@@ -17,6 +17,13 @@
     src: url("font/Poppins-SemiBold.ttf") format("truetype");
 }
 
+img {
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+
 html, body {height: 100%;}
 
 body {
@@ -46,6 +53,7 @@ body {
     padding: 30px;
     margin: 0 auto;
     background-color: #fff;
+    text-align: center;
 }
 
 .main_box {
@@ -74,6 +82,8 @@ body {
     background-color: #fff;
     text-align: center;
     border-radius: 20px;
+    border: 0;
+
 }
 
 .notification {
@@ -86,6 +96,8 @@ body {
     background-color: #fff;
     text-align: center;
     border-radius: 20px;
+    border: 0;
+    color: #979797;
 }
 
 
@@ -103,25 +115,18 @@ body {
 .semiSC {
     font-family: "PingFang SC SemiBold", serif;
     color: #606060;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .semiSC_2 {
     font-family: "PingFang SC SemiBold", serif;
-    color: #4C6187;
+    color: #4F658C;
     font-size: 12px;
     text-align: left;
 }
 
 .forgot {
     float: right;
-    margin-bottom:40px;
-    color: #B1B1B1;
-}
-
-
-.guest {
-    text-align: center;
     margin-bottom:40px;
     color: #B1B1B1;
 }
@@ -162,6 +167,18 @@ body {
     text-decoration: underline;
 }
 
+.greenbox {
+    background-color:#1FC6AD;
+    border-radius: 15px;
+    border:0;
+    display: none;
+}
+.greentext {
+    color: #fff;
+    text-align: left;
+
+}
+
 .orangeBtn {
     border: none;
     height: 35px;
@@ -188,10 +205,9 @@ body {
 }
 
 
-
 .round label {
     background-color: #fff;
-    border: 2px solid #707070;;
+    border: 2px solid #707070;
     border-radius: 50%;
     cursor: pointer;
     height: 17px;
@@ -221,119 +237,6 @@ body {
 
 
 
-.welcome-box .Progress-button {
-    position: relative;
-    /*left: 50%;*/
-    /*top: 90%;*/
-    top: 65px;
-    left: 165px;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-
-
-.welcome-box .Hyperlink-button {
-    position: relative;
-    top: 15px;
-    left: 160px;
-    transform: translate(-50%,-50%);
-    text-align: left;
-    font-size: 12px;
-    color:gray;
-}
-
-.welcome-box .Gray-button {
-    position: relative;
-    top: 1px;
-    left: 160px;
-    transform: translate(-50%,-50%);
-    text-align: left;
-    font-size: 12px;
-    color:gray;
-}
-
-
-.btn1{
-    border: none;
-    margin:  1px 200px;
-    font-size: 12px;
-    width: 140px;
-    color:gray;
-    background-color: white;
-
-}
-
-.btn1:hover{
-    color:black;
-}
-
-
-.pro_btn{
-    border: none;
-    margin:  20px;
-    padding: 10px;
-    width: 220px;
-    font-family: "monsterrat", sans-serif;
-    font-weight: 800;
-    font-size: 15px;
-    text-transform: uppercase;
-    transition: 0.3s;
-    cursor:pointer;
-    color:#fff;
-    border-radius: 28px;
-    background-size: 200%;
-}
-
-
-.pro_btn{
-    background-image: linear-gradient(to left,#EE5A24,#FFC312,#EE5A24)
-}
-
-
-.number_btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    width: 30px;
-    height:30px;
-    line-height:30px;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    overflow:hidden;
-    background-image: linear-gradient(45deg,#EE5A24 0%,#FFC312 70%);
-    transition:.4s;
-}
-
-
-.check_btn{
-    display: inline-block;
-    text-decoration: none;
-    border: black;
-    color: black;
-    width: 20px;
-    height:20px;
-    line-height:20px;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-
-
-}
-
-
-
-
-
-
-.terms{
-    width: 300px;
-    height: 600px;
-    top: 1000px;
-    background-color:white;
-    border-radius: 8px;
-}
-
 
 .profile-pic-div{
     height: 200px;
@@ -351,8 +254,6 @@ body {
 #file{
     display: none;
 }
-
-
 
 .centeredText{
     position: relative;

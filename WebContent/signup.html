@@ -1,13 +1,10 @@
-<!-- This page will be redirected from any url if you are not logged in -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,26 +22,21 @@
             <label for="gender" class="sr-only">Gender</label>
             <input name="gender" type="text" id="gender" class="form-control" placeholder="Gender" required="">
         </div>
-
         <div class="form-group">
             <img class ="form-control-icon" src="img/password.png" height = 35 alt="">
             <label for="password" class="sr-only">Password</label>
             <input name="password" type="password" id="password" class="form-control" placeholder="Password" required="">
         </div>
-
         <div class="form-group">
             <img class ="form-control-icon" src="img/confirm.png" height = 35 alt="">
             <label for="confirm" class="sr-only">Confirm Password</label>
             <input name="confirm" type="password" id="confirm" class="form-control" placeholder="Confirm Password" required="">
         </div>
-
             <div class="form-check member back round mt-0 mb-4">
             <input type="checkbox" id="checkbox" class="form-check-input mr-3" required/>
             <label class="form-check-label" for="checkbox"></label>
                 &nbsp;&nbsp;Agree to <a data-toggle="modal" data-target="#ModalLong"><nobr class="signup">Terms & Conditions </nobr></a>
             </div>
-
-
         <div class="modal fade" id="ModalLong" tabindex="-1" role="dialog" aria-labelledby="Term" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content term">
@@ -68,18 +60,12 @@
                 </div>
             </div>
         </div>
-
-
-
         <button class="btn orangeBtn" type="submit">Next Step</button>
-
         <div class="member">Already have an account? <a class ="signup" HREF="login.html">Sign in</a></div>
         <div id="login_error_message"></div>
     </form>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="./login.js"></script>
-
 </body>
 </html>
