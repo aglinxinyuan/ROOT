@@ -17,47 +17,60 @@
 
 
     <div class = "Hyperlink-button">
-        <A HREF="signup1.html"> Back </A>
+        <A HREF="index.html"> Back </A>
     </div>
 
-    <h1>Personal Info</h1>
+    <h1>Sign up!</h1>
 
     <div class="container">
-        <a href = "" class="btn number_btn">&#10003;</a>
+        <a href = "" class="btn number_btn">1</a>
         <a href = "" class="btn number_btn">2</a>
         <a href = "" class="btn number_btn">3</a>
         <a href = "" class="btn number_btn">4</a>
     </div>
 
-    <div class = "profile-pic-div">
-        <img src="profile.jpg" alt width = "201" height = "188"/>
-        <input type="file" id ="file">
-        <label for = "file" id="uploadBtn"> Choose Photo</label>
+
+    <div class = "credential-box">
+        <input name="name" placeholder="Name" type="text" id="name">
+        <i class="fas fa-user"></i>
     </div>
 
     <div class = "credential-box">
-        <input name="school_email" placeholder="Enter your school email address" type="text">
-        <i class="fas fa-envelope"></i>
+        <input name="gender" placeholder="Gender" type="text" id = "gender">
+        <i class="fas fa-venus-mars"></i>
     </div>
 
     <div class = "credential-box">
-        <input name="school" placeholder="School" type="password">
-        <i class="fas fa-user-graduate"></i>
+        <input name="password" placeholder="Password" type="password" id = "create_password">
+        <i class="fas fa-unlock-alt" aria-hidden="true"></i>
     </div>
 
     <div class = "credential-box">
-        <input name="major" placeholder="Major" type="password">
-        <i class="fas fa-book"></i>
+        <input name="confirm password" placeholder="Confirm Password" type="password" id = "create_password_confirm">
+        <i class="fas fa-lock"></i>
     </div>
 
 
 
+    <div class = "Hyperlink-button" >
+        <p style="text-align:left">
+            <input type = "checkbox" id = "agree_term">Agree to<A HREF="#" id = "term_id"> Terms & Conditions </A>
+        </p>
 
+        <script>
+            document.getElementById('term_id').addEventListener('click', function(){
+                document.querySelector('.bg-modal').style.display='flex';
+            });
+        </script>
 
-    <form action="verification.html">
-    <div class = "Progress-button">
-        <button class="btn pro_btn" type="submit">Next Step</button>
     </div>
+
+
+
+    <form action="personalinfo.html" method ="post">
+        <div class = "Progress-button" >
+            <button class="btn pro_btn" type="submit">Next Step</button>
+        </div>
     </form>
 
 

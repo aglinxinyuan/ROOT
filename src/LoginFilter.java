@@ -49,7 +49,7 @@ public class LoginFilter implements Filter {
     public void init(FilterConfig fConfig) {
         allowedURIs.add("login.html");
         allowedURIs.add("login.js");
-        allowedURIs.add("login.css");
+        allowedURIs.add("style.css");
         allowedURIs.add("img/login.png");
         allowedURIs.add("img/email.png");
         allowedURIs.add("img/password.png");
