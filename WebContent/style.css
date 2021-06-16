@@ -139,12 +139,9 @@ body {
     width: 9px;
 }
 .round {position: relative;}
-.round input[type="checkbox"] {opacity: 0.3;}
+.round input[type="checkbox"] {opacity: 0.01;}
 .round input[type="checkbox"]:checked + label {border-color: #707070;}
 .round input[type="checkbox"]:checked + label:after {opacity: 1;}
-
-
-
 
 
 
