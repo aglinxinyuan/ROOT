@@ -25,7 +25,7 @@
     </dependencies>
 
     <build>
-        <finalName>login-cart-example</finalName>
+        <finalName>ROOT</finalName>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>

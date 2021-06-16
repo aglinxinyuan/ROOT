@@ -1,111 +1,48 @@
-<!-- This page will be seen if you logged in -->
+<!-- This page will be redirected from any url if you are not logged in -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>Personal Info</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/f54dbe4fa3.js" crossorigin="anonymous"></script>
-
-
 </head>
-
-
 <body>
-<div class = "welcome-box">
+    <form class="box" id="signup_form" action="personalinfo.html" method="post">
+        <a HREF="signup.html"><img class ="back" src="img/back.png" height = 13 alt=""></a>
+        <div class="title mt-5 mb-3 pt-3">Personal Info</div>
+        <img class="mb-3 pb-1" src="img/personalinfo.png" width = 100% alt="">
 
-
-
-    <div class = "Hyperlink-button">
-        <A HREF="signup1.html"> Back </A>
-    </div>
-
-    <h1>Personal Info</h1>
-
-    <div class="container">
-        <a href = "" class="btn number_btn">&#10003;</a>
-        <a href = "" class="btn number_btn">2</a>
-        <a href = "" class="btn number_btn">3</a>
-        <a href = "" class="btn number_btn">4</a>
-    </div>
-
-    <div class = "profile-pic-div">
-        <img src="profile.jpg" alt width = "201" height = "188"/>
-        <input type="file" id ="file">
-        <label for = "file" id="uploadBtn"> Choose Photo</label>
-    </div>
-
-    <div class = "credential-box">
-        <input name="school_email" placeholder="Enter your school email address" type="text">
-        <i class="fas fa-envelope"></i>
-    </div>
-
-    <div class = "credential-box">
-        <input name="school" placeholder="School" type="password">
-        <i class="fas fa-user-graduate"></i>
-    </div>
-
-    <div class = "credential-box">
-        <input name="major" placeholder="Major" type="password">
-        <i class="fas fa-book"></i>
-    </div>
-
-
-
-
-
-    <form action="verification.html">
-    <div class = "Progress-button">
-        <button class="btn pro_btn" type="submit">Next Step</button>
-    </div>
-    </form>
-
-
-    <div class = "Hyperlink-button" >
-        <p style="text-align:center">
-            Already have an account?<A HREF="index.html"> Sign in! </A>
-        </p>
-
-    </div>
-
-
-
-</div>
-
-
-<div class = "bg-modal">
-    <div class = "terms">
-        <div class="close">+</div>
-
-        <p style="text-align:center">
-        <br>
-        <br>
-        Terms and Conditions
-        <br>
-        balabalabalabalabalabala
-        </p>
-
-
-        <div class = "Progress-button">
-            <button class="btn pro_btn" type="submit">Agree</button>
+        <img src="img/upload.png" width = 73 alt="">
+        <div class="form-group mt-2">
+            <img class ="form-control-icon" src="img/user.png" height = 35 alt="">
+            <label for="email" class="sr-only">Email</label>
+            <input name="email" type="email" id="email" class="form-control" placeholder="Enter your school email address" required="">
+        </div>
+        <div class="form-group">
+            <img class ="form-control-icon" src="img/school.png" height = 35 alt="">
+            <label for="school" class="sr-only">School</label>
+            <input name="school" type="text" id="school" class="form-control" placeholder="School" required="">
         </div>
 
+        <div class="form-group mb-5">
+            <img class ="form-control-icon" src="img/major.png" height = 35 alt="">
+            <label for="major" class="sr-only">Password</label>
+            <input name="major" type="text" id="major" class="form-control" placeholder="Major" required="">
+        </div>
 
+        <button class="btn orangeBtn" type="submit">Next Step</button>
 
-        <script>
-            document.querySelector('.close').addEventListener('click', function(){
-                document.querySelector('.bg-modal').style.display='none';
-            });
+        <div class="member">Already have an account? <a class ="signup" HREF="signin.html">Sign in</a></div>
+        <div id="login_error_message"></div>
+    </form>
 
-        </script>
-
-
-
-    </div>
-</div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="./login.js"></script>
 
 </body>
-
-
 </html>
