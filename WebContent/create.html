@@ -2,33 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Event</title>
+    <title>Create1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="outer_box">
-
-    <form class="main_box" id="forgot_form" action="reset.html" method="get">
-        <div class="bg_box">
+    <form class="main_box" id="event" action="create2.html" method="post" >
+        <div class="createEvent">
             <img src="img/createBackground.png" width = 100% alt="">
+            <div class="white-back" > <a href="main.html"><img  src="img/whiteback.png" height=18 alt=""></a></div>
+            <div class="event-step" > <img  src="img/event1.png" height=12 alt=""></div>
 
-            <a HREF="login.html"><img class ="back" src="img/back.png" height = 13 alt=""></a>
-            <div class="title mt-5 mb-3 pt-3">Create Event</div>
-            <div class="semiSC_2 mb-4"> Enter your email address and we'll send you a link to reset your password</div>
+            <div class="mainContent">
+                <div class="eventDetail">
+                    <div class="title mt-3 mb-3 pt-2">Create Event</div>
+                    <div class="semiSC_3 mb-2 mt-4">Event Title</div>
+                    <label for="evenTitle" class="sr-only">Event Title</label>
+                    <input name="evenTitle" type="text" id="evenTitle" class="form-control-description" placeholder="Example. Gym Fitness Training"  required="">
+                </div>
 
-            <div class="content">
-                this is create page
+                <div class="eventDetail">
+                    <div class="semiSC_3 mb-2 mt-5">Description</div>
+                    <label for="eventDescription" class="sr-only">Description</label>
+                    <input name="eventDescription" type="text" id="eventDescription" class="form-control-description" placeholder="For those of you who've been wanting to work out. You're invited to come and release your stress after work."  required="">
+
+                </div>
+
+                <div class="eventDetail">
+                    <div class="semiSC_3 mb-2 mt-5">Location</div>
+                </div>
+
+                <div class="eventDetail">
+                    <div class="semiSC_3 mb-2 mt-5">Date</div>
+                </div>
+
+
+
             </div>
+            <div class="nextStep">
+                <button class="btn orangeBtn" type="submit">Next Step</button>
+            </div>
+        </div>
 
 
 
-            <div id="send"><button class="btn orangeBtn mt-5" type="submit">Next Step</button></div>
-        </div >
     </form>
 </div>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="forgot.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="./login.js"></script>
 </body>
 </html>
