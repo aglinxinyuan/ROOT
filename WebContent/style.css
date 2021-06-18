@@ -162,11 +162,22 @@ input:checked + .slider:before {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
-.tagbar{
-    height: 340px;
+.topbar_white{
+    height: 140px;
     position: relative;
     border-radius: 0 0 28px 28px;
-    background-image: linear-gradient(45deg,#f8a03f,#fad961);
+   background-color: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.tagbar{
+    position: absolute;
+    top:5%;
+    height: 665px;
+    width: 100%;
+    padding: 15px;
+    border-radius:  28px 28px 0 0;
+    background-color: white;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
@@ -187,6 +198,14 @@ input:checked + .slider:before {
     top:30px;
     /*position:relative!important;*/
 }
+
+.row2{
+    position: absolute;
+    width:330px;
+    top:80px;
+    /*position:relative!important;*/
+}
+
 
 .createEvent{
     position: relative;
@@ -247,6 +266,23 @@ input:checked + .slider:before {
     font-size: 26px;
     text-align: left;
 }
+
+.title_centered {
+    font-family: "Poppins-Black", serif;
+    color: #22343D;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.title_centered_white {
+    font-family: "Poppins-Black", serif;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+
 
 .semiSC {
     font-family: "PingFang SC SemiBold", serif;
@@ -318,6 +354,11 @@ input:checked + .slider:before {
     position: absolute;
 }
 
+.searchBar2{
+
+    position: relative;
+}
+
 .form-control-search {
     position:relative;
     box-sizing: content-box;
@@ -344,7 +385,7 @@ input:checked + .slider:before {
 .form-group .form-control-icon-search {
     position: absolute;
     height: 18px;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top: 5px;
     z-index: 2;
     display: block;
