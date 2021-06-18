@@ -162,6 +162,15 @@ input:checked + .slider:before {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
+.topbar_tall{
+    height: 140px;
+    position: absolute;
+    border-radius: 0 0 28px 28px;
+    background-image: linear-gradient(45deg,#f8a03f,#fad961);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+
 .topbar_white{
     height: 140px;
     position: relative;
