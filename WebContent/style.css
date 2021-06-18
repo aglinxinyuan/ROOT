@@ -67,8 +67,8 @@ body {
 .switch {
     position: relative!important;
     display: inline-block!important;
-    width: 60px;
-    height: 34px;
+    width: 52px;
+    height: 28px;
 }
 
 .switch input {
@@ -87,15 +87,15 @@ body {
     background-color: #F0F0F0;
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius: 34px;
+    border-radius: 28px;
     border: 2px solid #F0F0F0;
 }
 
 .slider:before {
     position: absolute!important;
     content: "";
-    height: 30px;
-    width: 30px;
+    height: 24px;
+    width: 24px;
     left: 0;
     bottom: 0;
     background-color: #fff;
@@ -112,12 +112,12 @@ input:checked + .slider {
 
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(27px);
-    -ms-transform: translateX(27px);
-    transform: translateX(27px);
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
     background-color: #FCB43E;
-    height: 28px;
-    width: 28px;
+    height: 23px;
+    width: 23px;
     bottom: 1px;
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0);
 }
@@ -137,14 +137,28 @@ input:checked + .slider:before {
 }
 
 .content{
-    height : 440px;
+    height : 453px;
+    width : 330px;
+}
+
+.content_short{
+    height : 390px;
     width : 330px;
 }
 
 .mainContent{
     position: absolute;
     top: 10%;
-    height : 410px;
+    height : 310px;
+    width : 300px;
+    padding: 15px;
+
+}
+
+.mainContent_bot{
+    position: absolute;
+    top: 50%;
+    height : 310px;
     width : 300px;
     padding: 15px;
 
@@ -163,8 +177,8 @@ input:checked + .slider:before {
 }
 
 .topbar_tall{
-    height: 140px;
-    position: absolute;
+    height: 220px;
+    position: relative;
     border-radius: 0 0 28px 28px;
     background-image: linear-gradient(45deg,#f8a03f,#fad961);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
@@ -195,25 +209,23 @@ input:checked + .slider:before {
     height:107px;
     width:100%;
     display: inline-block;
-
 }
 
+.botbar_text{
+    position: relative;
+    background-color: white;
+    height:90px;
+    width:100%;
+    display: inline-block;
+}
 
 
 .row{
-    position: absolute;
-    width:330px;
-    left:15px;
-    top:30px;
-    /*position:relative!important;*/
+    position: relative;
+    width:100%;
+
 }
 
-.row2{
-    position: absolute;
-    width:330px;
-    top:80px;
-    /*position:relative!important;*/
-}
 
 
 .createEvent{
@@ -292,6 +304,13 @@ input:checked + .slider:before {
     position: relative;
 }
 
+.title_left_white {
+    font-family: "Poppins-Black", serif;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+}
 
 .semiSC {
     font-family: "PingFang SC SemiBold", serif;
@@ -321,6 +340,14 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
+.semiSC_5 {
+    font-family: "PingFang SC SemiBold", serif;
+    color: #000000;
+    font-size: 12px;
+    text-align: left;
+    opacity: 1;
+}
+
 .forgot {
     float: right;
     margin-bottom:40px;
@@ -339,6 +366,8 @@ input:checked + .slider:before {
     margin-bottom:0;
     font-size: 11px;
 }
+
+
 
 .form-control::placeholder {
     color: #979797;
@@ -364,7 +393,6 @@ input:checked + .slider:before {
 }
 
 .searchBar2{
-
     position: relative;
 }
 
@@ -479,71 +507,11 @@ input:checked + .slider:before {
     left: 20%;
 }
 
-.locationBtn{
-    top:35%;
-    left:6%;
-    position: absolute;
-
-}
 
 
-.dropdownBtn{
-    top:65%;
-    left:85%;
-    position: absolute;
-
-}
-
-.homeBtn{
-
-    position: relative !important;
-    top:0;
-    left:0;
-    background-color: #1FC6AD;
-    display: inline-block;
-    width: 70px;
-    height: 50px;
-
-}
 
 
-.tasksBtn{
-    position: relative !important;
-    background-color: #1FC6AD;
-    display: inline-block;
-    width: 70px;
-    height: 80px;
-}
 
-
-.intelligenceBtn{
-    position: relative !important;
-    background-color: #1FC6AD;
-    display: inline-block;
-    width: 70px;
-    height: 100px;
-}
-
-.messageBtn{
-    top:35%;
-    left:70%;
-    position: absolute;
-}
-
-
-.profileBtn {
-    position: relative !important;
-    background-color: #1FC6AD;
-    display: inline-block;
-    width: 70px;
-    height: 100px;
-}
-
-.mapBtn{
-    top:35%;
-    left:85%;
-    position: absolute;
-}
 
 
 .SearchBox{
