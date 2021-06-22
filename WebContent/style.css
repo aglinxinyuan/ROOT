@@ -129,7 +129,7 @@ input:checked + .slider:before {
     width: 330px;
     padding: 0;
     margin: 0 auto;
-    background-color: #fff;
+    background-color:#F7F7F7;
 }
 
 .bg_box {
@@ -176,6 +176,8 @@ input:checked + .slider:before {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
+
+
 .topbar_tall{
     height: 220px;
     position: relative;
@@ -189,9 +191,19 @@ input:checked + .slider:before {
     height: 140px;
     position: relative;
     border-radius: 0 0 28px 28px;
-   background-color: white;
+    background-color: white;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
+
+.topbar_short{
+    height: 100px;
+    position: relative;
+    border-radius: 0 0 28px 28px;
+    background-image: linear-gradient(45deg,#f8a03f,#fad961);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+
 
 .tagbar{
     position: absolute;
