@@ -118,7 +118,7 @@ input:checked + .slider:before {
     background-color: #FCB43E;
     height: 23px;
     width: 23px;
-    bottom: 1px;
+    bottom: 0;
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0);
 }
 
@@ -142,7 +142,7 @@ input:checked + .slider:before {
 }
 
 .content_short{
-    height : 410px;
+    height : 423px;
     width : 330px;
 }
 
@@ -196,7 +196,7 @@ input:checked + .slider:before {
 }
 
 .topbar_short{
-    height: 100px;
+    height: 80px;
     position: relative;
     border-radius: 0 0 28px 28px;
     background-image: linear-gradient(45deg,#f8a03f,#fad961);
@@ -225,8 +225,8 @@ input:checked + .slider:before {
 
 .botbar_text{
     position: relative;
-    background-color: #F5F5F5;
-    height:90px;
+    background-color:white;
+    height:57px;
     width:100%;
     display: inline-block;
 }
@@ -234,6 +234,9 @@ input:checked + .slider:before {
 
 .row{
     position: relative;
+    margin-left: 0;
+    margin-right:0;
+    background-color: transparent;
 
 }
 
@@ -359,6 +362,14 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
+.semiSC_6 {
+    font-family: "PingFang SC SemiBold", serif;
+    color: red;
+    font-size: 12px;
+    text-align: center;
+    opacity: 1;
+}
+
 .forgot {
     float: right;
     margin-bottom:40px;
@@ -475,6 +486,8 @@ input:checked + .slider:before {
     border-radius: 15px;
     border:0;
     display: none;
+
+
 }
 .greentext {
     color: #fff;
@@ -570,3 +583,21 @@ input:checked + .slider:before {
 }
 
 
+.button{
+    padding-left: 0;
+    padding-right: 0;
+    margin-top:10px;
+    width: 100%;
+    height: 40px;
+    color: black;
+    background-color: #FFFFFF;
+    border:1px solid transparent;
+}
+
+.groupMember{
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+}
+
+.form-check
