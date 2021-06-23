@@ -6,3 +6,9 @@
     background-image: linear-gradient(45deg,#f8a03f,#fad961);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
+
+.content_short{
+    height : 423px;
+    width : 330px;
+}
+

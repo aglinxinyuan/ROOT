@@ -58,7 +58,7 @@ body {
     width: 330px;
     padding: 30px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #F7F7F7;
     text-align: center;
 }
 
@@ -70,8 +70,6 @@ body {
     margin: 0 auto;
     background-color:#F7F7F7;
 }
-
-
 
 
 .switch {
@@ -143,10 +141,7 @@ input:checked + .slider:before {
     width : 330px;
 }
 
-.content_short{
-    height : 423px;
-    width : 330px;
-}
+
 
 .mainContent{
     position: absolute;
@@ -205,10 +200,13 @@ input:checked + .slider:before {
 
 .botbar_text{
     position: relative;
-    background-color:white;
+    background-color:#F5F5F5;
     height:57px;
     width:100%;
     display: inline-block;
+    border-color: #979797;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+
 }
 
 
@@ -538,10 +536,15 @@ input:checked + .slider:before {
     border:1px solid transparent;
 }
 
-.groupMember{
-    width: 100%;
-    height: 60px;
-    background-color: #ffffff;
+
+
+.Navigation{
+    background-color: white;
+    height:64px;
 }
 
-.form-check
+.navigationRow{
+    position: absolute;
+    width:100%;
+    top:28%;
+}
