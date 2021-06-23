@@ -211,10 +211,6 @@ input:checked + .slider:before {
     display: inline-block;
 }
 
-.Navigation{
-    background-color: white;
-    height:64px;
-}
 
 
 .row{
