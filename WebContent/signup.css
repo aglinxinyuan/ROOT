@@ -1,0 +1,14 @@
+
+.term {
+    height: 100%;
+    min-height:600px;
+    width: 100%;
+    max-width: 280px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    border: 0;
+
+}

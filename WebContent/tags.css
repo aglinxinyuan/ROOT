@@ -1,0 +1,13 @@
+
+
+.tagbar{
+    position: absolute;
+    top:5%;
+    height: 665px;
+    width: 100%;
+    padding: 15px;
+    border-radius:  28px 28px 0 0;
+    background-color: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
