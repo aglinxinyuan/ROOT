@@ -481,19 +481,19 @@ input:checked + .slider:before {
     text-decoration: underline;
 }
 
-.greenbox {
-    background-color:#1FC6AD;
-    border-radius: 15px;
-    border:0;
-    display: none;
+/*.greenbox {*/
+/*    background-color:#1FC6AD;*/
+/*    border-radius: 15px;*/
+/*    border:0;*/
+/*    display: none;*/
 
 
-}
-.greentext {
-    color: #fff;
-    text-align: left;
+/*}*/
+/*.greentext {*/
+/*    color: #fff;*/
+/*    text-align: left;*/
 
-}
+/*}*/
 
 .orangeBtn {
     border: none;
