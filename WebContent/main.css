@@ -1,2 +1,12 @@
 
 
+.block{
+    width: 500px;
+    height: 150px;
+}
+
+#wrapper {
+    width: 200px;
+    height: 400px;
+    overflow: scroll;
+}
