@@ -1,2 +1,27 @@
 
 
+.searchBox2{
+    width: 250px !important;
+    height: 16px !important;
+    background-color: black;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+/*.searchBox > i {*/
+/*    font-size: 11px;*/
+/*    color: #777;*/
+
+/*}*/
+
+.searchBox > input{
+    flex: 1;
+    height: 14px;
+    border: none;
+    outline: none;
+    font-size: 11px;
+    padding-left: 10px;
+
+}
