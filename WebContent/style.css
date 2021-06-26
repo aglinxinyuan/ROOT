@@ -137,6 +137,7 @@ input:checked + .slider:before {
 }
 
 .content{
+    position: relative;
     height : 453px;
     width : 330px;
 }
@@ -270,7 +271,7 @@ input:checked + .slider:before {
 .title_centered_white {
     font-family: "Poppins-Black", serif;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     position: relative;
 }
@@ -327,14 +328,31 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
-
 .semiSC_7 {
     font-family: "PingFang SC SemiBold", serif;
-    color: red;
-    font-size: 12px;
-    text-align: center;
+    color: white;
+    font-size: 14px;
+    text-align: left;
     opacity: 1;
 }
+
+.semiSC_8 {
+    font-family: "PingFang SC Medium", serif;
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    opacity: 1;
+}
+
+.semiSC_9 {
+    font-family: "PingFang SC SemiBold", serif;
+    color: #000000;
+    font-size: 11px;
+    text-align: right;
+    opacity: 1;
+}
+
+
 
 .form-control {
     position: relative;
@@ -382,6 +400,7 @@ input:checked + .slider:before {
     position:relative;
     box-sizing: content-box;
     height: 10px;
+    width: 100px;
     padding: 6px;
     background-color: #F5F5F5;
     color: #979797;
@@ -389,6 +408,7 @@ input:checked + .slider:before {
     border:0;
     margin-bottom:0;
     font-size: 10px;
+    align-items: center;
 }
 
 .form-control-search::placeholder {
@@ -404,7 +424,7 @@ input:checked + .slider:before {
 .form-group .form-control-icon-search {
     position: absolute;
     height: 18px;
-    padding-left: 20px;
+    padding-left: 10px;
     padding-top: 5px;
     z-index: 2;
     display: block;

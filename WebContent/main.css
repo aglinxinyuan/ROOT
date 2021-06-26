@@ -1,6 +1,49 @@
 
 
 .block{
-    position: absolute;
-    top:0;
+    position: relative !important;
+    height:180px;
+    width:100%;
+
+}
+
+.eventTitle{
+    position: absolute !important;
+    top:66%;
+}
+
+.eventLocation{
+    position: absolute !important;
+    top:76%;
+}
+
+.row{
+    padding: 0;
+}
+
+
+.searchBox{
+    width: 500px;
+    height: 50px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.searchBox > i {
+    font-size: 20px;
+    color: #777;
+
+}
+
+.searchBox > input{
+    flex: 1;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 10px;
+
 }

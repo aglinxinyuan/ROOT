@@ -3,16 +3,26 @@
 <head>
     <title>Simple Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./map.css" />
     <script src="./map.js"></script>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-<div id="map"></div>
+<div class="outer_box">
+    <div class="main_box" >
+        <div id="map"></div>
+         <div class="white-back"></div><a HREF="main.html"><img class ="white-back" src="img/back.png" height = 13 alt=""></a></div>
 
-<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-<script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBXO34MKMnr1LSD0TFBWKjHldTKsFgU2A&callback=initMap&libraries=&v=weekly"
-        async
-></script>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBXO34MKMnr1LSD0TFBWKjHldTKsFgU2A&callback=initMap&libraries=&v=weekly"
+            async
+     ></script>
+    </div>
+</div>
+
 </body>
 </html>
