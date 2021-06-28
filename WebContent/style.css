@@ -138,9 +138,9 @@ input:checked + .slider:before {
 
 .content{
     position: relative;
-    max-height : 453px;
-    max-width : 330px;
-    overflow: auto;
+    height : 453px;
+    width : 330px;
+
 }
 
 

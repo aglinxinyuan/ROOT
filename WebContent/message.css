@@ -25,15 +25,25 @@
 .chatBox{
     position: relative!important;
     height: 80px;
-    width: 300px;
+    width: 280px;
     border-radius: 15px;
-    margin: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
     background-color: white;
-    align-items: center;
 
 }
 
 .person{
     align-items: center !important;
     text-align: center;
+}
+
+
+
+.content{
+    overflow-y:hidden;
+}
+
+.content:hover{
+    overflow-y:scroll;
 }

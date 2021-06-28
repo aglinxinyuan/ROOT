@@ -1,4 +1,7 @@
+.addPictures{
+    position: relative!important;
+    height:250px;
+    width:300px;
+    background-color: #1FC6AD;
 
-.row{
-    width:100%;
 }

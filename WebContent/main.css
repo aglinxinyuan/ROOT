@@ -3,7 +3,10 @@
 .block{
     position: relative !important;
     height:180px;
-    width:100%;
+    width:280px;
+    margin-left: 25px;
+    margin-right: 25px;
+    align-items: center;
 
 }
 
@@ -59,4 +62,9 @@
     border-radius: 15px;
     background-color: white;
 
+}
+
+.content{
+    overflow:auto;
+    align-items: center;
 }
