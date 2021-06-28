@@ -58,7 +58,7 @@ body {
     width: 330px;
     padding: 30px;
     margin: 0 auto;
-    background-color: #F7F7F7;
+    background-color: white;
     text-align: center;
 }
 
@@ -138,8 +138,9 @@ input:checked + .slider:before {
 
 .content{
     position: relative;
-    height : 453px;
-    width : 330px;
+    max-height : 453px;
+    max-width : 330px;
+    overflow: auto;
 }
 
 
