@@ -363,6 +363,13 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
+.semiSC_10 {
+    font-family: "PingFang SC SemiBold", serif;
+    color: #606060;
+    font-size: 14px;
+    text-align: center;
+    opacity: 1;
+}
 
 
 .form-control {
