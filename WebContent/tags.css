@@ -11,3 +11,56 @@
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
+
+.searchBox3{
+    width: 280px !important;
+    height: 16px !important;
+    background-color: #F5F5F5;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+
+.searchBox3 > input{
+    flex: 1;
+    height: 14px;
+    border: none;
+    outline: none;
+    font-size: 11px;
+    padding-left: 10px;
+    background-color: #F5F5F5;
+
+}
+
+
+.addTags{
+    position: relative!important;
+    height:530px ;
+    width:100%;
+    padding-left:20px;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:20px;
+    overflow:auto;
+}
+
+.pic{
+    position:relative;
+    height:100px;
+    width:110px;
+
+
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+}
+
+#file{
+    display: none;
+    padding: 0;
+    margin:0;
+}

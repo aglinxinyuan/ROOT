@@ -41,9 +41,6 @@
 
 
 .content{
-    overflow-y:hidden;
+    overflow:scroll;
 }
 
-.content:hover{
-    overflow-y:scroll;
-}
