@@ -138,7 +138,7 @@ input:checked + .slider:before {
 
 .content{
     position: relative;
-    height : 453px;
+    height : 470px;
     width : 330px;
 
 }
@@ -190,6 +190,8 @@ input:checked + .slider:before {
     height:107px;
     width:100%;
     display: inline-block;
+    margin-top: -17px;
+    padding-top:-20px;
 }
 
 .botbar_text{
