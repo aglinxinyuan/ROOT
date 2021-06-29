@@ -371,6 +371,15 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
+.semiSC_11 {
+    font-family: "PingFang SC SemiBold", serif;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    opacity: 1;
+}
+
+
 
 .form-control {
     position: relative;
@@ -467,6 +476,7 @@ input:checked + .slider:before {
     color: #979797;
     opacity: 1;
 }
+
 
 .member {margin-top: 20px;}
 

@@ -1,0 +1,28 @@
+.photo_gallery{
+    position: relative;
+    height:300px;
+    width:100%;
+}
+
+.eventTitle{
+    position: absolute !important;
+    top:88%;
+}
+
+.activity_content{
+    position: relative;
+    height:400px;
+    width:100%;
+    overflow: scroll;
+}
+
+.orangeBtn{
+    width:90px;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.row{
+    height:40px;
+}
