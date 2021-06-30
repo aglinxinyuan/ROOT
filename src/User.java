@@ -4,10 +4,16 @@
  */
 public class User {
 
-    private final String username;
+    private final String email;
+    private final int id;
 
-    public User(String username) {
-        this.username = username;
+    public User(String email, int id) {
+        this.email = email;
+        this.id = id;
+    }
+
+    public int GetId() {
+        return this.id;
     }
 
 }
