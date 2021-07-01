@@ -4,19 +4,13 @@ const file = document.querySelector('#file');
 const uploadBtn = document.querySelector('#uploadBTN');
 
 
-file.addEventListener('change', function(){
-    //this refers to file
-    const choosedFile = this.files[0];
+document.querySelector("#file").addEventListener("change", function(){
+        const reader = new FileReader();
 
-    if (choosedFile) {
-
-        const reader = new FileReader(); //FileReader is a predefined function of JS
-
-        reader.addEventListener('load', function(){
-            img.setAttribute('src', reader.result);
+        reader.addEventListener("load", function(){
+            let result = reader.result.toString();
+            localStorage.setItem("recent-image", result);
         });
+        reader.readAsDataURL(this.files[0]);
 
-        reader.readAsDataURL(choosedFile);
-
-    }
-});
+})

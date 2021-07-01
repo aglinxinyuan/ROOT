@@ -21,6 +21,10 @@
     height: 100%;
 }
 
+.pic input[type='file']{
+    display: none;
+}
+
 #file{
     display: none;
     padding: 0;

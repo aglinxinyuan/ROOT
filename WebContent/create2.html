@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="create.css">
+
+    <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.11/jquery.uploadfile.min.js"></script>
+
+
 </head>
 <body>
 <div class="outer_box">
@@ -39,8 +45,8 @@
                         <img src="img/road.png" alt="">
                     </div>
                     <div class="pic">
-                        <input type="file" id="file">
-                        <label for="file" id="uploadBtn"> <img src="img/addImg.png" id="photo" alt=""></label>
+                        <label for="fileupload"> <img src="img/road.png" id="upload-img" alt=""></label>
+                        <input type="file" id="fileupload">
                     </div>
                 </div>
 
@@ -56,6 +62,20 @@
     </form>
 </div>
 
+<script src="js/jquery-latest.min.js"></script>
+
+<script>
+    $(function(){
+        $("#fileupload").change(function(event) {
+            let x = URL.createObjectURL(event.target.files[0]);
+            $("#upload-img").attr("src",x);
+            console.log(event);
+        });
+    })
+</script>
+
+
+<script src="./create.js"></script>
 
 </body>
 </html>
