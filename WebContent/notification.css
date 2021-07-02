@@ -1,0 +1,35 @@
+
+.notification_content{
+    position: relative;
+    height : 670px;
+    width : 330px;
+
+}
+
+.chatBox{
+    position: relative!important;
+    height: 80px;
+    width: 290px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+
+}
+
+.person{
+    align-items: center !important;
+    text-align: center;
+}
+
+.orangeBtn{
+    width:80px;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.content{
+    overflow:scroll;
+}
+

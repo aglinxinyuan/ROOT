@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="personalsafety.css">
 </head>
 <body>
 <div class="outer_box">
     <div class="main_box" >
         <div class="topbar_short">
             <div class="row ml-0 pt-4">
-                <div class="col-3 mt-4" > <a HREF="host.html"><img class ="back" src="img/whiteback.png" height = 13 alt=""></a></div>
+                <div class="col-3 mt-4" > <a HREF="report.html"><img class ="back" src="img/whiteback.png" height = 13 alt=""></a></div>
                 <div class="col-6 mt-3 mb-3" > <div class="title_centered_white ">Report</div></div>
             </div>
         </div>
@@ -21,54 +22,74 @@
             <div class="semiSC_5 "> Select the illegal content type:</div>
         </div>
 
-        <div class="row ml-0 mt-3">
-            <div class="col-9">
-                <div class="eventDetail">
-                    <div class="semiSC_5 mt-2">Sexual harassments</div>
+        <div class="whiteBox mt-2">
+            <div class="row ml-0 pt-2">
+                <div class="col-9 ">
+                    <div class="eventDetail">
+                        <div class="semiSC_5 mt-2">Sexual harassments</div>
+                    </div>
+                </div>
+                <div class="col-3 pt-1">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
                 </div>
             </div>
-            <div class="col-3">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
+
+            <div class="row ml-0 pt-2">
+                <div class="col-9">
+                    <div class="eventDetail">
+                        <div class="semiSC_5 mt-2">Physical violences</div>
+                    </div>
+                </div>
+                <div class="col-3 pt-1">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="row ml-0 pt-2">
+                <div class="col-9">
+                    <div class="eventDetail">
+                        <div class="semiSC_5 mt-2">Lewd or harassing speech</div>
+                    </div>
+                </div>
+                <div class="col-3 pt-1">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
             </div>
         </div>
 
-        <div class="row ml-0 mt-3">
-            <div class="col-9">
-                <div class="eventDetail">
-                    <div class="semiSC_5 mt-2">Physical violences</div>
-                </div>
+        <button class="button">
+            <div class="row">
+                <div class="col-10"><div class="semiSC_5 ">Others, tell us more!</div></div>
             </div>
-            <div class="col-3">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
+        </button>
+
+        <div class="whiteBox pb-3">
+            <div class="form-group">
+                <label for="comment"></label>
+                <textarea class="form-control pl-3" rows="5" id="comment" placeholder="With as much detail as you’re comfortable with,
+please tell us what happened. "></textarea>
             </div>
+            <form action="main.html" method="post">
+                <button class="btn orangeBtn" type="submit" >Submit</button>
+            </form>
+
         </div>
 
-        <div class="row ml-0 mt-3">
-            <div class="col-9">
-                <div class="eventDetail">
-                    <div class="semiSC_5 mt-2">Lewd or harassing speech</div>
-                </div>
-            </div>
-            <div class="col-3">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-        </div>
 
         <form action="main.html" method="post">
             <button class="button" >
                 <div class="semiSC_6">Notice</div>
             </button>
         </form>
-
 
     </div>
 </div>

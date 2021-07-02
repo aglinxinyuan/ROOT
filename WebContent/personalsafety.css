@@ -1,0 +1,15 @@
+.form-control{
+    background-color:white;
+    padding: 15px;
+    border:20px;
+}
+
+.orangeBtn{
+    width:90px;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+.col{
+    overflow: hidden;
+}

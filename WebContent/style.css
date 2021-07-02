@@ -605,3 +605,10 @@ input:checked + .slider:before {
 ::-webkit-scrollbar-thumb:hover{
     display: flex;
 }
+
+
+
+.whiteBox{
+    background-color: white;
+
+}
