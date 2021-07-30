@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Places Search Box</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="googlemap.css" />
+
+</head>
+<body>
+
+This page is used for testing
+
+<input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Search Box"
+/>
+<div id="map"></div>
+
+<div class="status"></div>
+<button id="find-state" >Get Location</button>
+
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgoiGsS5sT-jnQ1DbD61LI_1AdoynHIg&callback=initAutocomplete&libraries=places&v=weekly"
+        async
+></script>
+
+<script src="googlemap.js"></script>
+
+
+
+
+</body>
+</html>
