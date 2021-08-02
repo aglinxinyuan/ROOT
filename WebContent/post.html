@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Intelligence</title>
+    <title>CreatPost</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="outer_box">
-        <form class="main_box" id="signup_form" action="main.html" method="post" >
+    <form class="main_box" id="signup_form" action="main.html" method="post" >
         <div class="topbar_white_short">
             <div class="row ml-0 pt-4">
                 <div class="col-3 mt-4" > <a HREF="intelligence.html"><img class ="back" src="img/back.png" height = 13 alt=""></a></div>
@@ -23,11 +23,11 @@
         <div class="Post_content p-3">
             <div class="postPictures">
                 <div class="pic">
-                    <label for="fileupload5"> <img src="img/addImg.png" id="upload-img1" alt=""></label>
+                    <label for="fileupload5"> <img src="img/addImg.png" height = 100 id="upload-img1" alt=""></label>
                     <input type="file" id="fileupload5">
                 </div>
                 <div class="pic">
-                    <label for="fileupload6"> <img src="img/addImg.png" id="upload-img2" alt=""></label>
+                    <label for="fileupload6"> <img src="img/addImg.png" height = 100 id="upload-img2" alt=""></label>
                     <input type="file" id="fileupload6">
                 </div>
             </div>
@@ -66,16 +66,22 @@
                             blablablaBlablabla blablablaBlablabla
                             blablablaBlablabla blablablaBlablabla
                             blablablaBlablabla blablablaBlablabla
-                          </div>
+                        </div>
 
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="row"><img src="./img/save.png" height = 28></div>
+                <div class="row">save</div>
+            </div>
+            <div class="col-10"><button class="btn shareBtn" type="submit">Share</button></div>
+        </div>
 
-            <button class="btn shareBtn" type="submit">Share</button>
 
-    </div>
+    </form>
 </div>
 
 <script src="js/jquery-latest.min.js"></script>
