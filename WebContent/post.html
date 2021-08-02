@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+<div class="outer_box">
+        <form class="main_box" id="signup_form" action="main.html" method="post" >
+        <div class="topbar_white_short">
+            <div class="row ml-0 pt-4">
+                <div class="col-3 mt-4" > <a HREF="intelligence.html"><img class ="back" src="img/back.png" height = 13 alt=""></a></div>
+                <div class="col-6 mt-3 mb-3" > <div class="title_centered ">New Post</div></div>
+                <div class="col-3 mt-3" ><a data-toggle="modal" data-target="#ModalLong"><img  src="img/greyInfo.png" height = 20 alt=""></nobr></a></div>
+            </div>
+        </div>
+
+
+        <div class="Post_content p-3">
+            <div class="postPictures">
+                <div class="pic">
+                    <label for="fileupload5"> <img src="img/addImg.png" id="upload-img1" alt=""></label>
+                    <input type="file" id="fileupload5">
+                </div>
+                <div class="pic">
+                    <label for="fileupload6"> <img src="img/addImg.png" id="upload-img2" alt=""></label>
+                    <input type="file" id="fileupload6">
+                </div>
+            </div>
+
+            <div class="postDetail p-1">
+                <div class="semiSC_3 mb-2 mt-4">Title</div>
+                <label for="postTitle" class="sr-only"> Title</label>
+                <input name="postTitle" type="text" id="postTitle" class="form-control-description" placeholder="Example. Pool Party Las Vegas 2021"  required="">
+            </div>
+
+            <div class="postDetail p-1">
+                <div class="semiSC_3 mb-2 mt-5">Content</div>
+                <label for="postDescription" class="sr-only">Content</label>
+                <input name="postDescription" type="text" id="postDescription" class="form-control-description" placeholder="For those of you who've been wanting to work out. You're invited to come and release your stress after work."  required="">
+
+            </div>
+
+            <div class="postDetail p-1">
+                <div class="semiSC_3 mb-2 mt-5">Add Location</div>
+                <label for="pac-input" class="sr-only">Add Location</label>
+                <input name="postLocation" type="text" id="pac-input" class="form-control-description" placeholder="Location"  required="">
+                <div id="map"></div>
+            </div>
+
+            <div class="modal fade" id="ModalLong" tabindex="-1" role="dialog" aria-labelledby="Term" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content postingRule">
+                        <a data-dismiss="modal"><img class ="close" src="img/close.png" height = 13 alt=""></a>
+                        <div class="semiSC mb-3">Posting Rules</div>
+                        <div class="mb-5 pb-5">
+                            Blablabla blablabla Blablabla&nbsp;
+                            blablabla Blablabla blablabla&nbsp;
+                            Blablabla blablablaBlablabla&nbsp;
+                            blablablaBlablabla blablablaBlablabla
+                            blablablaBlablabla blablablaBlablabla
+                            blablablaBlablabla blablablaBlablabla
+                            blablablaBlablabla blablablaBlablabla
+                            blablablaBlablabla blablablaBlablabla
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <button class="btn shareBtn" type="submit">Share</button>
+
+    </div>
+</div>
+
+<script src="js/jquery-latest.min.js"></script>
+<script src="./post.js" type="text/javascript"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="./googlemap.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgoiGsS5sT-jnQ1DbD61LI_1AdoynHIg&callback=initAutocomplete&libraries=places&v=weekly"
+        async></script>
+
+
+</body>
+</html>

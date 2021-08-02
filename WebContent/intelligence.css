@@ -1,11 +1,49 @@
 .Intelligence_content{
     position:relative!important;
     height:527px;
-    width:300px
+    width:330px;
+    overflow: scroll;
 }
-
 
 
 .content{
     overflow:scroll;
+}
+
+.container{
+    align-items: flex-end;
+}
+
+.card{
+    width:130px!important;
+    height:250px;
+    border-radius: 15px;
+    margin-left:0;
+    margin-right:0;
+    padding:0;
+    border:none;
+    background-color: white;
+}
+
+.image{
+    width:130px;
+    height:180px;
+    overflow: hidden;
+
+}
+
+.image img{
+    width:130px;
+    height:180px;
+    /*overflow: hidden;*/
+}
+
+.title{
+    width:auto;
+    text-align: left;
+}
+
+.name{
+    width:auto;
+    text-align: left;
 }
