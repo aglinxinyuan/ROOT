@@ -3,3 +3,8 @@
     margin-bottom:40px;
     color: #B1B1B1;
 }
+
+#login_error_message {
+    padding-top: 10px;
+    color: red;
+}
