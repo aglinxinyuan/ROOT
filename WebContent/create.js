@@ -30,8 +30,6 @@ createEvent_form.submit(submitEventForm);
 
 
 
-
-
 $(function(){
     $("#fileupload1").change(function(event) {
         let var1 = URL.createObjectURL(event.target.files[0]);

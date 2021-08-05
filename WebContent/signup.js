@@ -2,16 +2,8 @@ let currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
 function showTab(n) {
-    // This function will display the specified tab of the form...
     const x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
-    //... and fix the Previous/Next buttons:
-
-    if (n === (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
-    } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
-    }
 }
 
 function nextPrev(n) {
@@ -26,7 +18,7 @@ function nextPrev(n) {
     // if you have reached the end of the form...
     if (currentTab >= x.length) {
         // ... the form gets submitted:
-        document.getElementById("regForm").submit();
+        document.getElementById("signup_form").submit();
         return false;
     }
     // Otherwise, display the correct tab:
