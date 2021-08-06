@@ -157,6 +157,7 @@ input:checked + .slider:before {
 
 .eventDetail{
     position:relative;
+    text-align: left;
 }
 
 .topbar{
