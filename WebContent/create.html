@@ -5,57 +5,66 @@
     <title>Create1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
-<!--    <link rel="stylesheet" href="datepicker.css">-->
-
+    <link rel="stylesheet" href="create.css">
 
 
 </head>
 <body>
 <div class="outer_box">
     <form class="main_box" id="createEvent_form" action="create2.html" method="post" >
+
         <div class="createEvent">
-            <img src="img/createBackground.png" width = 100% height = 700 alt="">
-            <div class="white-back" > <a href="main.html"><img  src="img/whiteback.png" height=18 alt=""></a></div>
-            <div class="event-step" > <img  src="img/event1.png" height=12 alt=""></div>
+            <div class="tab">
+                <img src="img/createBackground.png" width = 100% height = 700 alt="">
+                <div class="white-back" > <a href="main.html"><img  src="img/whiteback.png" height=18 alt=""></a></div>
+                <div class="event-step" > <img  src="img/event1.png" height=12 alt=""></div>
 
-            <div class="mainContent">
-                <div class="eventDetail p-3">
-                    <div class="title mt-3 mb-3 pt-2">Create Event</div>
-                    <div class="semiSC_3 mb-2 mt-4">Event Title</div>
-                    <label for="evenTitle" class="sr-only">Event Title</label>
-                    <input name="evenTitle" type="text" id="evenTitle" class="form-control-description" placeholder="Example. Gym Fitness Training"  required="">
+                <div class="mainContent">
+                    <div class="eventDetail p-3">
+                        <div class="title mt-3 mb-3 pt-2">Create Event</div>
+                        <div class="semiSC_3 mb-2 mt-4">Event Title</div>
+                        <label for="evenTitle" class="sr-only">Event Title</label>
+                        <input name="evenTitle" type="text" id="evenTitle" class="form-control-description" placeholder="Example. Gym Fitness Training"  required="">
+                    </div>
+
+                    <div class="eventDetail p-3">
+                        <div class="semiSC_3 mb-2 mt-5">Description</div>
+                        <label for="eventDescription" class="sr-only">Description</label>
+                        <input name="eventDescription" type="text" id="eventDescription" class="form-control-description" placeholder="For those of you who've been wanting to work out. You're invited to come and release your stress after work."  required="">
+
+                    </div>
+
+                    <div class="eventDetail p-3">
+                        <div class="semiSC_3 mb-2 mt-5">Location</div>
+                        <label for="pac-input" class="sr-only">Location</label>
+                        <input name="evenLocation" type="text" id="pac-input" class="form-control-description" placeholder="Location"  required="">
+                        <div id="map"></div>
+                    </div>
+
+                    <div class="eventDetail p-3">
+                        <div class="semiSC_3 mb-2 mt-4">Date</div>
+                        <label for="evenDate" class="sr-only">Date Time</label>
+                        <input name="evenDate" type="text" id="evenDate" class="form-control-description" placeholder="Example. 08-03-2021 10:00"  required="">
+                    </div>
+
                 </div>
-
-                <div class="eventDetail p-3">
-                    <div class="semiSC_3 mb-2 mt-5">Description</div>
-                    <label for="eventDescription" class="sr-only">Description</label>
-                    <input name="eventDescription" type="text" id="eventDescription" class="form-control-description" placeholder="For those of you who've been wanting to work out. You're invited to come and release your stress after work."  required="">
-
-                </div>
-
-                <div class="eventDetail p-3">
-                    <div class="semiSC_3 mb-2 mt-5">Location</div>
-                    <label for="pac-input" class="sr-only">Location</label>
-                    <input name="evenLocation" type="text" id="pac-input" class="form-control-description" placeholder="Location"  required="">
-                    <div id="map"></div>
-                </div>
-
-                <div class="eventDetail p-3">
-                    <div class="semiSC_3 mb-2 mt-4">Date</div>
-                    <label for="evenDate" class="sr-only">Date Time</label>
-                    <input name="evenDate" type="text" id="evenDate" class="form-control-description" placeholder="Example. 08-03-2021 10:00"  required="">
-                </div>
+            </div>
 
 
+            <div class="tab">
 
             </div>
+
+
 
             <div class="nextStep">
-                <button class="btn orangeBtn" type="submit">Next Step</button>
+                <button  type="button" class="btn orangeBtn" onclick="nextPrev(1)">Next Step</button>
             </div>
+
         </div>
+
+
 
 
     </form>
@@ -65,9 +74,9 @@
 
 
 
-<script src="./create.js"></script>
+<script src="create.js"></script>
 <script src="./googlemap.js"></script>
-<script src="./bootstrap-datetimepicker.min.js"></script>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRgoiGsS5sT-jnQ1DbD61LI_1AdoynHIg&callback=initAutocomplete&libraries=places&v=weekly"

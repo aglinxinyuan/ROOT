@@ -1,3 +1,35 @@
+let currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+    const x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+}
+
+function nextPrev(n) {
+    // This function will figure out which tab to display
+    const x = document.getElementsByClassName("tab");
+    // Exit the function if any field in the current tab is invalid:
+    if (n === 1 && !validateForm()) return false;
+    // Hide the current tab:
+    x[currentTab].style.display = "none";
+    // Increase or decrease the current tab by 1:
+    currentTab = currentTab + n;
+    // if you have reached the end of the form...
+    if (currentTab >= x.length) {
+        // ... the form gets submitted:
+        document.getElementById("createEvent_form").submit();
+        return false;
+    }
+    // Otherwise, display the correct tab:
+    showTab(currentTab);
+}
+
+
+
+
+
+
 let createEvent_form = $("#createEvent_form");
 
 
@@ -55,47 +87,4 @@ $(function(){
         console.log(event);
     });
 })
-
-
-// $("#jquery-upload-button").click(function(){
-//     let formData = new FormData();
-//     let file = $("#file")[0].files[0];
-//     formData.append('file', file);
-//
-//     $.ajax({
-//         url:'upload.php',
-//         type:'post',
-//         data: formData,
-//         contentType: false,
-//         processData: false,
-//         success:function(data){
-//                 if (data !== 0){
-//                 alert('Successful JQuery file upload to: '+ data);
-//             }
-//             else{
-//                 alert('JQuery file upload error.');
-//             }
-//         },
-//     });
-// });
-
-//
-// $(document).ready(function (){
-//     $('form#uploadform').submit(function (e){
-//         e.preventDefault();
-//         let FormData = new FormData(this);
-//         $.ajax({
-//            type:"post",
-//             url:'upload.php',
-//             data: FormData,
-//             cache: false,
-//             processData:false,
-//             contentType: false,
-//             success: function (data){
-//                console.log(data);
-//             }
-//         });
-//     })
-// })
-//
 
