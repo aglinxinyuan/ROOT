@@ -16,16 +16,20 @@ function nextPrev(n) {
     // Increase or decrease the current tab by 1:
     currentTab = currentTab + n;
     // if you have reached the end of the form...
-    if (currentTab >= x.length) {
+    if (currentTab >= 3) {
         // ... the form gets submitted:
-        document.getElementById("createEvent_form").submit();
+        $.ajax(
+            "api/create", {
+                method: "POST",
+                data: $("#createEvent_form").serialize(),
+                success: window.location.replace("main.html")
+            }
+        );
         return false;
     }
     // Otherwise, display the correct tab:
     showTab(currentTab);
 }
-
-
 
 function validateForm() {
     // This function deals with validation of the form fields
@@ -35,7 +39,7 @@ function validateForm() {
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
-        if (y[i].value === "") {
+        if ((currentTab === 0) && (y[i].value === "")) {
             // add an "invalid" class to the field:
             y[i].className += " invalid";
             // and set the current valid status to false
@@ -45,41 +49,6 @@ function validateForm() {
 
     return valid; // return the valid status
 }
-
-
-
-
-
-let createEvent_form = $("#createEvent_form");
-
-
-function handleEventResult(resultData) {
-    $("#evenTitle").text(resultData['evenTitle'])
-    $("#eventDescription").text(resultData['eventDescription'])
-    $("#eventLocation").text(resultData['eventLocation'])
-    $("#eventDate").text(resultData['eventDate'])
-}
-
-
-function submitEventForm(formSubmitEvent) {
-    formSubmitEvent.preventDefault();
-    $.ajax(
-        "api/login", {
-            method: "POST",
-            data: createEvent_form.serialize(),
-            success: handleEventResult
-        }
-    );
-}
-
-createEvent_form.submit(submitEventForm);
-
-
-
-
-
-
-
 
 
 $(function(){
