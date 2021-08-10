@@ -13,7 +13,7 @@
     <form class="main_box" id="signup_form" action="main.html" method="post" >
         <div class="topbar_white_short">
             <div class="row ml-0 pt-4">
-                <div class="col-3 mt-4" > <a HREF="intelligence.html"><img class ="back" src="img/back.png" height = 13 alt=""></a></div>
+                <div class="col-3 mt-4" > <a data-toggle="modal" data-target="#ModalShort"><img class ="back" src="img/back.png" height = 13 alt=""></nobr></a></div>
                 <div class="col-6 mt-3 mb-3" > <div class="title_centered ">New Post</div></div>
                 <div class="col-3 mt-3" ><a data-toggle="modal" data-target="#ModalLong"><img  src="img/greyInfo.png" height = 20 alt=""></nobr></a></div>
             </div>
@@ -71,7 +71,28 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modal fade" id="ModalShort" tabindex="-1" role="dialog" aria-labelledby="Term" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content SaveOrDiscard">
+                        <div class="semiSC_10 mb-3">If you go back now, your edits will be discarded.</div>
+                        <a class="semiSC_6 mb-3" href="intelligence.html">Discard</a>
+                        <a class="semiSC mb-3" href="post.html">Save Draft</a>
+                        <a class="close semiSC mt-3 mb-3" data-dismiss="modal" aria-label = "Close">Cancel</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </div>
+
+
+
+
+
         <div class="row">
             <div class="col-2">
                 <div class="row"><img src="./img/save.png" height = 28></div>
