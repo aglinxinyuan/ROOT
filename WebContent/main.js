@@ -2,7 +2,7 @@ function handleMainResult(resultData) {
     let element = $("#events");
     for (let i = 0; i < resultData.length; i++) {
         let rowHTML = '<div class="block">' +
-            '<a href="activity.html"><img  src="img/gym.png" height = 160 alt=""></a>' +
+            '<a href="activity.html?id=i"><img  src="img/gym.png" height = 160 alt=""></a>' +
             '<div class="eventTitle pl-4"><div id="title" class="semiSC_7">' + resultData[i]["title"] + '</div></div>' +
             '<div class="eventLocation pl-4"><div id="location" class="semiSC_8"><img class="mr-1" src="img/location.png" height=10 alt="">' + resultData[i]["location"] + '</div></div>' ;
         element.append(rowHTML);

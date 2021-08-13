@@ -1,16 +1,39 @@
 function handleActivityResult(resultData) {
-    $("#title").text(resultData['title'])
-    $("#name").text(resultData['name'])
-    $("#level").text(resultData['level'])
-    $("#time").text(resultData['time'])
-    $("#location").text(resultData['location'])
-    $("#about").text(resultData['about'])
+    let element = $("#activityTitle");
+    let rowHTML = '<div class="block">' +
+        '<div class="eventTitle pl-4"><div id="title" class="semiSC_7">' + resultData[i]["title"] + '</div></div>';
+    element.append(rowHTML);
 }
 
 
-jQuery.ajax({
+$.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "activity"+window.location.search, // Setting request url, which is mapped by StarsServlet in Stars.java
+    url: "api/event", // Setting request url, which is mapped by Servlet in GetEvent.java
     success: (resultData) => handleActivityResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
+
+
+
+
+
+
+
+
+
+//function handleActivityResult(resultData) {
+//     $("#title").text(resultData['title'])
+//     $("#name").text(resultData['name'])
+//     $("#level").text(resultData['level'])
+//     $("#time").text(resultData['time'])
+//     $("#location").text(resultData['location'])
+//     $("#about").text(resultData['about'])
+// }
+//
+//
+// jQuery.ajax({
+//     dataType: "json", // Setting return data type
+//     method: "GET", // Setting request method
+//     url: "activity"+window.location.search, // Setting request url, which is mapped by StarsServlet in Stars.java
+//     success: (resultData) => handleActivityResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
+// });/
