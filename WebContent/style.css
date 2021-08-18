@@ -385,6 +385,14 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
+.semiSC_12 {
+    font-family: "Poppins Black", serif;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    opacity: 1;
+}
+
 
 
 .form-control {

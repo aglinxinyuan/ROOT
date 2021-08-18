@@ -1,0 +1,52 @@
+
+
+.background{
+    position: relative;
+    width: 330px;
+    height: 280px;
+    z-index: 1;
+}
+
+#background {
+    width: 330px;
+    /*z-index: -1;*/
+}
+
+.container1{
+    position: relative;
+    width: 330px;
+    height: 80px;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-top: -40px;
+    z-index: 3;
+}
+
+.container2{
+    width: 330px;
+    height: 380px;
+    background-color: white;
+    position: relative;
+    z-index: 3;
+    overflow: scroll;
+    border-top-style: solid;
+    border-top-color: coral;
+    border-width: medium;
+}
+
+.functions{
+    position: absolute !important;
+    top: 10%;
+    width:330px;
+}
+
+.profileRow{
+    position: absolute !important;
+    width:330px;
+    top:-60%;
+    z-index: 5;
+    align-items: center;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
