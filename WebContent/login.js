@@ -3,7 +3,7 @@ let login_form = $("#login_form");
 
 function handleLoginResult(resultDataString) {
     let resultDataJson = JSON.parse(resultDataString);
-    if (resultDataJson["status"] === "success") window.location.replace("index.html");
+    if (resultDataJson["status"] === "success") window.location.replace("main.html");
     else $("#login_error_message").html(resultDataJson["message"]);
 }
 

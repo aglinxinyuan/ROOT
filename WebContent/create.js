@@ -1,6 +1,19 @@
 let currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
+
+
+$('.click').click(function(){
+    $(".signup").text(this.id);
+    $("#tag").val(this.id);
+});
+
+
+$("#evenDate").datepicker();
+$("#evenTime").timepicker({
+    timeFormat: 'HH:mm'
+});
+
 function showTab(n) {
     const x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
@@ -39,7 +52,7 @@ function validateForm() {
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
-        if ((currentTab === 0) && (y[i].value === "")) {
+        if ((currentTab === 0 || currentTab === 2) && (y[i].value === "")) {
             // add an "invalid" class to the field:
             y[i].className += " invalid";
             // and set the current valid status to false
