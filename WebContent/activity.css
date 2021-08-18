@@ -26,3 +26,15 @@
 .row{
     height:40px;
 }
+
+.GreyBtn {
+    width:90px;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+    border: none;
+    font-family: "Poppins-SemiBold", sans-serif;
+    color:#fff;
+    border-radius: 28px!important;
+    background-color: #CCCCCC!important;
+}
