@@ -11,3 +11,23 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.infowindow{
+    height : 180px;
+    width: 180px;
+    overflow: scroll;
+
+}
+
+.gmnoprint{
+    display: none;
+}
+
+.main_box{
+    position:relative;
+}
+.back{
+    position: absolute !important;
+    top: 5%;
+    left: 5%;
+}

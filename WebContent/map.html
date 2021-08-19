@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Simple Map</title>
+    <title>Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./map.css" />
-
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
 
 </head>
 <body>
 <div class="outer_box">
     <div class="main_box" >
-        <div id="map"></div>
-         <div class="white-back"></div><a HREF="main.html"><img class ="white-back" src="img/back.png" height = 13 alt=""></a></div>
+        <div id="map">
+        </div>
+        <div class="back">
+            <a HREF="main.html"><img class ="white-back" src="img/back.png" height = 15 alt=""></a>
+        </div>
 
 
 
-    <script src="./map.js"></script>
+        <script src="./map.js"></script>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
         <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBXO34MKMnr1LSD0TFBWKjHldTKsFgU2A&callback=initMap&libraries=&v=weekly"
-            async
-     ></script>
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBXO34MKMnr1LSD0TFBWKjHldTKsFgU2A&callback=initMap&libraries=&v=weekly"
+                async
+        ></script>
     </div>
 </div>
 
