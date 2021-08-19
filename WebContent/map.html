@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Simple Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="./map.css" />
-    <script src="./map.js"></script>
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -16,6 +18,9 @@
          <div class="white-back"></div><a HREF="main.html"><img class ="white-back" src="img/back.png" height = 13 alt=""></a></div>
 
 
+
+    <script src="./map.js"></script>
+
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBXO34MKMnr1LSD0TFBWKjHldTKsFgU2A&callback=initMap&libraries=&v=weekly"
@@ -23,6 +28,13 @@
      ></script>
     </div>
 </div>
+
+<div id="formatted-address" class=""></div>
+<div id="address-components"></div>
+<div id="geometry"></div>
+
+
+
 
 </body>
 </html>
