@@ -57,7 +57,7 @@ public class CreateServlet extends HttpServlet {
 
         try (Connection conn = dataSource.getConnection()) {
             User user = (User) request.getSession().getAttribute("user");
-            String query = "INSERT INTO event(creator, title, description, location, date,time, tag, photo_url_prefix, skill, capacity, agelimit, autojoin, friendsonly, friendsinvite, pageview) VALUES(?, ?, ?, ?, ?, ?, ?, 'photo_url_prefix', ?, ?, ?, ?, ?, ?, 0);";
+            String query = "INSERT INTO event (creator, title, description, location, date,time, tag, photo_url_prefix, skill, capacity, agelimit, autojoin, friendsonly, friendsinvite, pageview) VALUES(?, ?, ?, ?, ?, ?, ?, 'photo_url_prefix', ?, ?, ?, ?, ?, ?, 0);";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1, user.GetName());
             statement.setString(2, title);

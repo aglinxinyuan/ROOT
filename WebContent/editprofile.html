@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Editing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="editprofile.css">
+</head>
+<body>
+<div class="outer_box">
+    <div class="main_box" >
+        <div class="topbar_short">
+            <div class="row ml-0 pt-4">
+                <div class="col-3 mt-4" > <a HREF="profile.html"><img class ="back" src="img/whiteback.png" height = 10 alt=""></a></div>
+                <div class="col-6 mt-3 mb-3" > <div class="title_centered_white ">Edit profile</div></div>
+            </div>
+        </div>
+        
+        <div class="profilePhoto">
+                <img src="./img/profileicon.png">
+                <input type="file" id = "file">
+                <label for="file" id="uploadBtn">Change Photo</label>
+        </div>
+
+        <div class="profileEdit">
+            <div class="profileName p-3">
+                <div class="semiSC_3 mb-2 ">User name</div>
+                <label for="profileName" class="sr-only">User name</label>
+                <input name="profileName" type="text" id="profileName" class="form-control-description" placeholder="John Fred"  required="">
+            </div>
+
+            <div class="profileAbout p-3">
+                <div class="semiSC_3 mb-2">About me</div>
+                <label for="profileAbout" class="sr-only">About me</label>
+                <input name="profileAbout" type="text" id="profileAbout" class="form-control-description" placeholder="Snowboarding has always been a little getaway for me and I am looking forward to getting some beautiful runs in this year!"  required="">
+            </div>
+
+            <div class="profileInterests p-3">
+                <div class="semiSC_3 mb-2 ">My Interests</div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="botbar">
+            <img src="img/botbar.png" width = 100% alt="">
+            <div class="Navigation">
+                <div class="row navigationRow" >
+                    <div class="col mt-4" ><a href="main.html"><img  src="img/homeClicked.png" height=30 alt=""></a></div>
+                    <div class="col mt-4" ><a  href="#"><img src="img/tasks.png" height = 20 alt=""></a></div>
+                    <div class="col" ><a class="btn orangeCircleBtn" HREF="create.html" >+</a></div>
+                    <div class="col mt-4" ><a  href="#"><img src="img/intelligence.png" height = 20 alt=""></a></div>
+                    <div class="col mt-4" ><a  href="#"><img  src="img/profile.png" height = 20 alt=""></a></div>
+                </div>
+            </div>
+        </div>
+
+        <!--            <div class="saveEdit">-->
+        <a href="profile.html"> <button  type="button" class="btn orangeBtn">Save</button></a>
+        <!--            </div>-->
+
+
+
+    </div>
+</div>
+
+</body>
+</html>
