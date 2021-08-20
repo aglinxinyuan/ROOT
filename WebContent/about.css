@@ -1,0 +1,22 @@
+
+.main_box{
+    background-color: white;
+}
+
+
+.brand{
+    height:150px;
+    width:330px;
+    text-align: center;
+}
+.brand img{
+    height: 60px;
+    width:60px;
+}
+.button{
+    margin-top: 0;
+    height:45px;
+    width:300px;
+    border-width: medium;
+    border-top: black;
+}
