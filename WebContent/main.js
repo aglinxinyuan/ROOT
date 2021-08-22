@@ -37,24 +37,24 @@ $.ajax({
 });
 
 
-
-const findMyState = ()=> {
-    const status = document.querySelector('.status');
-
-    const success = (position) =>{
-        console.log(position)
-        const geoApiUrl = 'http://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}localityLanguage=en'
-
-        fetch(geoApiUrl)
-            .then(res => res.json())
-            .then(data => {
-                status.textContent = data.city
-            })
-    }
-    const err = (position) =>{
-        status.textContent = 'Unable to retrieve your location'
-    }
-    navigator.geolocation.getCurrentPosition(success, err);
-
-}
-document.querySelector('#find-state').addEventListener('click', findMyState);
+//
+// const findMyState = ()=> {
+//     const status = document.querySelector('.status');
+//
+//     const success = (position) =>{
+//         console.log(position)
+//         const geoApiUrl = 'http://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}localityLanguage=en'
+//
+//         fetch(geoApiUrl)
+//             .then(res => res.json())
+//             .then(data => {
+//                 status.textContent = data.city
+//             })
+//     }
+//     const err = (position) =>{
+//         status.textContent = 'Unable to retrieve your location'
+//     }
+//     navigator.geolocation.getCurrentPosition(success, err);
+//
+// }
+// document.querySelector('#find-state').addEventListener('click', findMyState);

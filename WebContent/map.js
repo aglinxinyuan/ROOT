@@ -26,12 +26,6 @@ function initMap() {
         activity: {
             icon: img.src,
         },
-        // library: {
-        //     icon: iconBase + "library_maps.png",
-        // },
-        // info: {
-        //     icon: iconBase + "info-i_maps.png",
-        // },
     };
 
 
@@ -76,21 +70,10 @@ function initMap() {
                 </ul>
             `;
 
-                // Address Components
-                // let addressComponents = response.data.results[0].address_components;
-                // let addressComponentsOutput = '<ul class = "list-group">';
-                // for(let i =0; i < addressComponents.length; i++){
-                //     addressComponentsOutput += `
-                //     <li class="list-group-item"><srong>${addressComponents[i].types[0]}</srong>: ${addressComponents[i].long_name}</li>
-                // `;
-                // }
-                // addressComponentsOutput += '</u>'
 
                 // Geometry
                 lat= (response.data.results[0].geometry.location.lat);
                 lng= (response.data.results[0].geometry.location.lng);
-                // console.log("returned value:"+lat);
-                // console.log("returned value:"+lng);
 
                 const marker = new google.maps.Marker({
                     position: response.data.results[0].geometry.location,
@@ -98,19 +81,6 @@ function initMap() {
                     map: map,
                 });
 
-                // const markers = locations.map((location,i) =>{
-                //     return new google.maps.Marker({
-                //     position: response.data.results[0].geometry.location,
-                //     icon: icons["activity"].icon,
-                //     map: map,
-                //     label: labels[i % labels.length],
-                //     });
-                // });
-                //
-                //     new MarkerClusterer(map, marker, {
-                //         imagePath:
-                //             "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-                //     });
 
 
 
@@ -122,23 +92,6 @@ function initMap() {
                     });
                 });
 
-
-
-
-            //     let geometryOutput = `
-            //     <ul class = "list-group">
-            //     <li class ="list-group-item"><strong>Latitude</strong>:${lat}</li>
-            //     <li class ="list-group-item"><strong>Longitude</strong>:${lng}</li>
-            //     </ul>
-            // `;
-
-
-                //output to app
-                // document.getElementById('formatted-address').innerHTML = formattedAddressOutput;
-                // document.getElementById('address-components').innerHTML = addressComponentsOutput;
-                // document.getElementById('geometry').innerHTML = geometryOutput;
-
-                // console.log("lat's value: " + response.data.results[0].geometry.location.lat);
 
             })
             .catch(function (error){
