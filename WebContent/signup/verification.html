@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Verification</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            let e = window.location.search.substring(1);
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "service@ez-cross.com",
+                Password : "erg43t32fwegv",
+                To : e,
+                From : "service@ez-cross.com",
+                Subject : "Verification",
+                Body : "https://ez-cross.com/signup/congratulation.html?"+btoa(e)
+            });
+        }
+
+    </script>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
+
 </head>
 <body>
 <div class="outer_box">
@@ -16,12 +33,12 @@
         <div class="container w-75">
             <div class="semiSC mb-1"><h6>Please verify your email</h6></div>
         <img src="sent.png" width = 85% alt="">
-        <div class="semiSC mx-1">You’re almost there! We sent an email to</div>
+        <div class="semiSC mx-1">You’re almost there!  We sent an email to</div>
         <div class="semiSC mb-4 text-primary" id="email">xxxxx@school.edu</div>
         <div class="semiSC mb-5">Please click on the link in that email to
             complete your signup.</div>
         </div>
-        <div class="member">Can’t find the email? <a class ="signup" HREF="../login/index.html">Resend Email</a></div>
+        <div class="member">Can’t find the email? <a class ="signup" HREF="#" onclick="sendEmail()" >Resend Email</a></div>
     </div>
 </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
