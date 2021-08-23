@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-@WebServlet(name = "SignupServlet", urlPatterns = "/api/signup")
+@WebServlet(name = "SignupServlet", urlPatterns = "/signup/api")
 public class SignupServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     // Create a dataSource which registered in web.

@@ -13,7 +13,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-@WebServlet(name = "LoginServlet", urlPatterns = "/api/login")
+@WebServlet(name = "LoginServlet", urlPatterns = "/login/api")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     // Create a dataSource which registered in web.

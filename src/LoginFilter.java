@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Servlet Filter implementation class LoginFilter
  */
-//@WebFilter(filterName = "LoginFilter", urlPatterns = "/*")
+@WebFilter(filterName = "LoginFilter", urlPatterns = "/*")
 public class LoginFilter implements Filter {
     private final ArrayList<String> allowedURIs = new ArrayList<>();
 
@@ -31,7 +31,7 @@ public class LoginFilter implements Filter {
 
         // Redirect to login page if the "user" attribute doesn't exist in session
         if (httpRequest.getSession().getAttribute("user") == null) {
-            httpResponse.sendRedirect("login.html");
+            httpResponse.sendRedirect("./login/");
         } else {
             chain.doFilter(request, response);
         }
@@ -43,20 +43,14 @@ public class LoginFilter implements Filter {
          Always allow your own login related requests(html, js, servlet, etc..)
          You might also want to allow some CSS files, etc..
          */
-        return allowedURIs.stream().anyMatch(requestURI.toLowerCase()::endsWith);
+        return allowedURIs.stream().anyMatch(requestURI.toLowerCase()::contains);
     }
 
     public void init(FilterConfig fConfig) {
-        allowedURIs.add("login.html");
-        allowedURIs.add("login.js");
+        allowedURIs.add("login/");
+        allowedURIs.add("signup/");
         allowedURIs.add("style.css");
-        allowedURIs.add("img/login.png");
-        allowedURIs.add("img/email.png");
-        allowedURIs.add("img/password.png");
-        allowedURIs.add("api/login");
-        allowedURIs.add("font/PingFang-SC-Bold.ttf");
-        allowedURIs.add("font/Poppins-Black.ttf");
-        allowedURIs.add("font/Poppins-SemiBold.ttf");
+        allowedURIs.add("font/");
     }
 
     public void destroy() {
