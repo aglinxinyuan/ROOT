@@ -1,1 +1,1 @@
-$("#email").html("signup/"+window.location.search.substring(1));
+$("#email").html(window.location.search.substring(1));
