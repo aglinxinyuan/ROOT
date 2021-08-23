@@ -1,4 +1,5 @@
 function handleMainResult(resultData) {
+    console.log(resultData);
     $("#activityTitle").text(resultData['title'])
     $("#name").text(resultData['creator'])
     $("#level").text(resultData['skill'])
@@ -13,6 +14,7 @@ $.ajax({
     url: "api/activity"+window.location.search, // Setting request url, which is mapped by StarsServlet in Stars.java
     success: (resultData) => handleMainResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
+
 
 let btn = $('.btn');
 btn.click(function(){
