@@ -1,14 +1,29 @@
 let map;
 
-
 // store all the locations that needed to be represented
-let places = ["130 Sims Dr Syracuse, NY",
-    "130 Sims Dr Syracuse, NY",
-    "222 Waverly Ave Syracuse, NY 13244",
-    "Eggers Hall 200 Syracuse, NY 13244",
-    "Syracuse University, Address"];
+const activities = [""];
+const places = [""];
+const idlist = [""];
 
 
+
+
+function handleMapResult(resultData) {
+
+
+    for (let i = 0; i < resultData.length-1 ; i++) {
+        activities.push(resultData[i]["title"]);
+        places.push(resultData[i]["location"]);
+        idlist.push(resultData[i]["id"]);
+    }
+}
+
+$.ajax({
+    dataType: "json", // Setting return data type
+    method: "GET", // Setting request method
+    url: "api/event", // Setting request url, which is mapped by StarsServlet in Stars.java
+    success: (resultData) => handleMapResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
+});
 
 
 function initMap() {
@@ -29,28 +44,11 @@ function initMap() {
     };
 
 
-    const contentString =
-        '<div class= "infowindow" id="content">' +
-        // '<div id="siteNotice">' +
-        // "</div>" +
-        '<h1 id="firstHeading" class="firstHeading">Location</h1>' +
-        '<div id="bodyContent">' +
-        "<p><b>This location</b>, has following activities going on: </p>" +
-        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-        "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
-        "(last visited June 22, 2009).</p>" +
-        "</div>" +
-        "</div>";
-    const infowindow = new google.maps.InfoWindow({
-        content: contentString,
-    });
-
-    const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
 
 
-    function geocode(loc){
+    function geocode(loc,infowindow){
         let lat,lng;
         axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
             params:{
@@ -83,7 +81,6 @@ function initMap() {
 
 
 
-
                 marker.addListener("click", () => {
                     infowindow.open({
                         anchor: marker,
@@ -100,7 +97,24 @@ function initMap() {
     }
 
     for (let i = 0; i < places.length; i++){
-        geocode(places[i]);
+
+        const contentString =
+            '<div class= "infowindow" id="content">' +
+            // '<div id="siteNotice">' +
+            // "</div>" +
+            '<div id="firstHeading" class="firstHeading semiSC_12">'+ places[i] +'</div>' +
+            '<div id="bodyContent">' +
+            "<p><b>This location</b>, has following activities going on: </p>" +
+            '<p>'+ activities[i]+'<a href="activity.html?id='+idlist[i]+'">' +
+            "</p>" +
+            "</div>" +
+            "</div>";
+        const infowindow = new google.maps.InfoWindow({
+            content: contentString,
+        });
+
+        geocode(places[i],infowindow);
+
     }
 
 }
