@@ -20,7 +20,7 @@ function nextPrev(n) {
     if (currentTab >= x.length) {
         // ... the form gets submitted:
         $.ajax(
-            "api/signup", {
+            "../api/signup", {
                 method: "POST",
                 data: $("#signup_form").serialize(),
                 success: window.location.replace("verification.html?"+$("#email").val())
