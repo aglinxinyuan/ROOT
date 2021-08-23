@@ -3,6 +3,6 @@ $.get( "api/user", function( data ) {
         window.location.replace("./login/login.html")
     }
     else {
-        window.location.replace("main.html")
+        window.location.replace("../main.html")
     }
 });
