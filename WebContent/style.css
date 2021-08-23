@@ -170,7 +170,8 @@ input:checked + .slider:before {
     position: relative;
     border-radius: 0 0 28px 28px;
     background-image: linear-gradient(45deg,#f8a03f,#fad961);
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .topbar_white{
