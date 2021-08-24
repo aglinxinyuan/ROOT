@@ -31,15 +31,19 @@ public class GetUserInfo extends HttpServlet {
         response.setStatus(200);
         try (Connection conn = dataSource.getConnection()) {
             Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.event;");
+            User user = (User) request.getSession().getAttribute("user");
+            System.out.println("getting!"+user.GetName());
+            System.out.println("getting!"+user.GetEmail());
+            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.user WHERE `email`='"+ user.GetEmail()+"';");
+            System.out.println("getting!");
             JsonArray jsonArray = new JsonArray();
 
             // Iterate through each row of rs
             while (rs.next()) {
                 // Create a JsonObject based on the data we retrieve from rs
                 JsonObject jsonObject = new JsonObject();
-                jsonObject.addProperty("email", rs.getString("email"));
                 jsonObject.addProperty("name", rs.getString("name"));
+                jsonObject.addProperty("email", rs.getString("email"));
                 jsonObject.addProperty("school", rs.getString("school"));
                 jsonObject.addProperty("major", rs.getString("major"));
                 jsonArray.add(jsonObject);
