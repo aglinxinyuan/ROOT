@@ -5,18 +5,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "GetUser", urlPatterns = "/api/user")
-public class GetUser extends HttpServlet {
+@WebServlet(name = "GetUser", urlPatterns = "/logout")
+public class Logout extends HttpServlet {
     private static final long serialVersionUID = 1L;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter out = response.getWriter();
-        User user = (User) request.getSession().getAttribute("user");
-        if (user == null) {
-            out.write("null");
-        }
-        else {
-            out.write(user.GetName());
-        }
+        request.getSession().setAttribute("user",null);
+        out.write("<html><head><meta http-equiv=\"refresh\" content=\"0; url='./'\" /></head></html>");
         response.setStatus(200);
         out.close();
         }

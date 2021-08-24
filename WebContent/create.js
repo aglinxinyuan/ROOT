@@ -64,29 +64,29 @@ function validateForm() {
 }
 
 
-$(function(){
-    $("#fileupload1").change(function(event) {
-        let var1 = URL.createObjectURL(event.target.files[0]);
-        $("#upload-img1").attr("src",var1);
-        console.log(event);
-    });
 
-    $("#fileupload2").change(function(event) {
-        let var2 = URL.createObjectURL(event.target.files[0]);
-        $("#upload-img2").attr("src",var2);
-        console.log(event);
-    });
+$("#fileupload1").change(function(event) {
+    let var1 = URL.createObjectURL(event.target.files[0]);
+    $("#upload-img1").attr("src",var1);
+    console.log(var1);
+});
 
-    $("#fileupload3").change(function(event) {
-        let var3 = URL.createObjectURL(event.target.files[0]);
-        $("#upload-img3").attr("src",var3);
-        console.log(event);
-    });
+$("#fileupload2").change(function(event) {
+    let var2 = URL.createObjectURL(event.target.files[0]);
+    $("#upload-img2").attr("src",var2);
+    console.log(event);
+});
 
-    $("#fileupload4").change(function(event) {
-        let var4 = URL.createObjectURL(event.target.files[0]);
-        $("#upload-img4").attr("src",var4);
-        console.log(event);
-    });
-})
+$("#fileupload3").change(function(event) {
+    let var3 = URL.createObjectURL(event.target.files[0]);
+    $("#upload-img3").attr("src",var3);
+    console.log(event);
+});
+
+$("#fileupload4").change(function(event) {
+    let var4 = URL.createObjectURL(event.target.files[0]);
+    $("#upload-img4").attr("src",var4);
+    console.log(event);
+});
+
 
