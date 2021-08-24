@@ -3,7 +3,7 @@ function handleProfileResult(resultData) {
     // $("#name").text(resultData[15]['title'])
     // $("#aboutme").text(resultData[15]['location'])
     $("#name").text(resultData[1]['name'])
-    $("#email").text(resultData[1]['email'])
+    $("#aboutme").text(resultData[1]['email'])
     $("#school").text(resultData[1]['school'])
     $("#major").text(resultData[1]['major'])
     console.log("something here");
