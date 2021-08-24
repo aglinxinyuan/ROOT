@@ -32,10 +32,7 @@ public class GetUserInfo extends HttpServlet {
         try (Connection conn = dataSource.getConnection()) {
             Statement statement = conn.createStatement();
             User user = (User) request.getSession().getAttribute("user");
-            System.out.println("getting!"+user.GetName());
-            System.out.println("getting!"+user.GetEmail());
-            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.user WHERE `email`='"+ user.GetEmail()+"';");
-            System.out.println("getting!");
+            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.user WHERE id='"+ user.GetId()+"';");
             JsonArray jsonArray = new JsonArray();
 
             // Iterate through each row of rs
