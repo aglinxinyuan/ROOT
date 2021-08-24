@@ -45,6 +45,7 @@ public class GetUserInfo extends HttpServlet {
                 jsonObject.addProperty("name", rs.getString("name"));
                 jsonObject.addProperty("email", rs.getString("email"));
                 jsonObject.addProperty("school", rs.getString("school"));
+                jsonObject.addProperty("gender", rs.getString("gender"));
                 jsonObject.addProperty("major", rs.getString("major"));
                 jsonArray.add(jsonObject);
             }
