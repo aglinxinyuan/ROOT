@@ -6,9 +6,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
+import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
+import java.util.Iterator;
+import java.util.List;
+
+
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.*;
 
 @WebServlet(name = "CreateServlet", urlPatterns = "/api/create")
 public class CreateServlet extends HttpServlet {
@@ -26,6 +35,40 @@ public class CreateServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
+        DiskFileItemFactory factory = new DiskFileItemFactory();
+        // maximum size that will be stored in memory
+        factory.setSizeThreshold(4096);
+        // the location for saving data that is larger than getSizeThreshold()
+        factory.setRepository(new File("C:\\temp"));
+
+        ServletFileUpload upload = new ServletFileUpload(factory);
+        // maximum size before a FileUploadException will be thrown
+        upload.setSizeMax(1000000);
+
+        List fileItems = null;
+        try {
+            fileItems = upload.parseRequest(request);
+        } catch (FileUploadException e) {
+            e.printStackTrace();
+        }
+        // assume we know there are two files. The first file is a small
+        // text file, the second is unknown and is written to a file on
+        // the server
+        Iterator i = fileItems.iterator();
+        String comment = ((FileItem)i.next()).getString();
+        FileItem fi = (FileItem)i.next();
+        // filename on the client
+        String fileName = fi.getName();
+        // save comment and filename to database
+
+        // write the file
+        try {
+            fi.write(new File("/", fileName));
+            System.out.print(fileName);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         String title = request.getParameter("evenTitle");
         String location = request.getParameter("evenLocation");
         String description = request.getParameter("eventDescription");
