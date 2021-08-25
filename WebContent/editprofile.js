@@ -1,15 +1,13 @@
 function handlePersonalInfoResult(resultData) {
-    console.log("something here");
-    // $("#name").text(resultData[15]['title'])
-    // $("#aboutme").text(resultData[15]['location'])
-    $("#name").text(resultData[0]['name'])
-    $("#email").text(resultData[0]['email'])
-    $("#gender").text(resultData[0]['gender'])
-    $("#school").text(resultData[0]['school'])
-    $("#major").text(resultData[0]['major'])
-    $("#aboutme").text(resultData[0]['email'])
-    console.log("something here");
-    console.log(resultData);
+
+    document.getElementById("name").value = resultData[0]['name'];
+    document.getElementById("gender").value = resultData[0]['gender'];
+    document.getElementById("school").value = resultData[0]['school'];
+    document.getElementById("major").value = resultData[0]['major'];
+    document.getElementById("birth").value = resultData[0]['birth'];
+    document.getElementById("email").value = resultData[0]['email'];
+    document.getElementById("phone").value = resultData[0]['phone'];
+    document.getElementById("aboutme").value = resultData[0]['aboutme'];
 }
 
 $.ajax({
@@ -20,4 +18,14 @@ $.ajax({
 });
 
 
+function submitEditProfile_form(){
 
+    $.ajax(
+        "api/editProfile", {
+            method: "POST",
+            data: $("#editProfile_form").serialize(),
+            success: window.location.replace("profile.html")
+        }
+    );
+
+}

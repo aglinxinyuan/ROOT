@@ -1,5 +1,7 @@
 
-
+.main_box{
+    background-color: white;
+}
 .background{
     position: relative;
     width: 330px;
@@ -25,7 +27,7 @@
 
 .container2{
     width: 330px;
-    height: 380px;
+    height: 286px;
     background-color: white;
     position: relative;
     z-index: 3;
