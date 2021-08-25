@@ -37,6 +37,19 @@ $.ajax({
 });
 
 
+// Show the ModalEventCreated if a new event is created.
+$(document).ready(function() {
+    if(window.location.href.indexOf('#ModalEventCreated') !== -1) {
+        $('#ModalEventCreated').modal('show');
+
+        $(document.body).click(function() {
+            window.location.replace('main.html');
+        });
+    }
+
+});
+
+
 function searchFunction() {
     let input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("searchInput");
@@ -53,6 +66,9 @@ function searchFunction() {
         }
     }
 }
+
+
+
 
 
 

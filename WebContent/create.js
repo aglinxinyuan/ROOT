@@ -38,7 +38,7 @@ function nextPrev(n) {
                 data: formData,
                 contentType: false,
                 processData: false,
-                success: window.location.replace("main.html")
+                success: window.location.replace("main.html?#ModalEventCreated")
             }
         );
         return false;

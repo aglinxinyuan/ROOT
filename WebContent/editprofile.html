@@ -13,7 +13,7 @@
     <div class="main_box" >
         <div class="topbar_short">
             <div class="row ml-0 pt-4">
-                <div class="col-3 mt-4" > <a HREF="profile.html"><img class ="back" src="img/whiteback.png" height = 10 alt=""></a></div>
+                <div class="col-3 mt-4" > <a HREF="profile.html"><img class ="back" src="img/whiteback.png" height = 13 alt=""></a></div>
                 <div class="col-6 mt-3 mb-3" > <div class="title_centered_white ">Edit profile</div></div>
             </div>
         </div>
@@ -25,20 +25,52 @@
         </div>
 
         <div class="profileEdit">
-            <div class="profileName p-3">
-                <div class="semiSC_3 mb-2 ">User name</div>
-                <label for="profileName" class="sr-only">User name</label>
-                <input name="profileName" type="text" id="profileName" class="form-control-description" placeholder="John Fred"  required="">
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2 ">User name</div>
+                <label for="name" class="sr-only">User name</label>
+                <input name="name" type="text" id="name" class="form-control-description"  required="">
             </div>
 
-            <div class="profileAbout p-3">
-                <div class="semiSC_3 mb-2">About me</div>
-                <label for="profileAbout" class="sr-only">About me</label>
-                <input name="profileAbout" type="text" id="profileAbout" class="form-control-description" placeholder="Snowboarding has always been a little getaway for me and I am looking forward to getting some beautiful runs in this year!"  required="">
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2 ">Gender</div>
+                <label for="gender" class="sr-only">Gender</label>
+                <input name="gender" type="text" id="gender" class="form-control-description"  required="">
+            </div>
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2 ">University of College</div>
+                <label for="school" class="sr-only">University of College</label>
+                <input name="school" type="text" id="school" class="form-control-description"   required="">
+            </div>
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2 ">Major</div>
+                <label for="major" class="sr-only">Major</label>
+                <input name="major" type="text" id="major" class="form-control-description"   required="">
+            </div>
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2 ">Date of Birth</div>
+                <label for="birthday" class="sr-only">Date of Birth</label>
+                <input name="birthday" type="text" id="birthday" class="form-control-description"  required="">
+            </div>
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2 ">Email</div>
+                <label for="email" class="sr-only">Email</label>
+                <input name="email" type="text" id="email" class="form-control-description"  required="">
             </div>
 
-            <div class="profileInterests p-3">
-                <div class="semiSC_3 mb-2 ">My Interests</div>
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2">Phone Number</div>
+                <label for="phone" class="sr-only">Phone Number</label>
+                <input name="phone" type="text" id="phone" class="form-control-description"   required="">
+            </div>
+
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2">About me</div>
+                <label for="aboutme" class="sr-only">About me</label>
+                <input name="aboutme" type="text" id="aboutme" class="form-control-description"   required="">
+            </div>
+
+            <div class="personalInfo p-3">
+                <div class="semiSC_5 mb-2 ">Interests tag</div>
             </div>
 
         </div>
@@ -67,6 +99,12 @@
 
     </div>
 </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="editprofile.js"> </script>
+
+
 
 </body>
 </html>

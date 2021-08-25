@@ -81,3 +81,21 @@
 li {
     list-style-type: none;
 }
+
+.eventCreated {
+    height:200px;
+    width: 180px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    opacity:0.8;
+    text-align: center;
+    border-radius: 20px;
+    border: 0;
+    color: #979797;
+}
+
+.modal-backdrop
+{
+    opacity:0.2 !important;
+}
