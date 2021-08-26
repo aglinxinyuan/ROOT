@@ -9,17 +9,47 @@
     <link rel="stylesheet" href="chat.css">
 </head>
 <body>
-<div class="outer_box">
-    <div class="main_box" >
+<form class="outer_box">
+    <form class="main_box" id="message_form" action="#" method="post" >
         <div class="topbar_short">
             <div class="row ml-0 pt-4">
-                <div class="col-3 mt-4" > <a HREF="host.html"><img class ="back" src="img/whiteback.png" height = 13 alt=""></a></div>
+                <div class="col-3 mt-4" > <a HREF="message.html"><img class ="back" src="img/whiteback.png" height = 13 alt=""></a></div>
                 <div class="col-6 mt-3 mb-3" > <div class="title_centered_white ">Julia Sarda</div></div>
             </div>
         </div>
 
         <div class="chatBox">
+            <div class="messageBlock">
+                            <div class="card-body height5">
+                                <ul class="chat-list">
+                                    <li class="in">
+                                        <div class="chat-img">
+                                            <img alt="" src="img/alex.png" height=50>
+                                        </div>
+                                        <div class="chat-body">
+                                            <div class="chat-message semiSC">
+                                                <p>Raw denim heard of them tofu masnim heard of them tofu master enim heard of them tofu nim heard of them tofu master enim heard of them tofu ter enim heard of them tofu  cleanse</p>
+                                            </div>
+                                        </div>
+                                        <div id="timeStampIn" class="time semiSC">4:00</div>
+                                    </li>
+                                    <li class="out">
 
+                                        <div class="chat-img">
+                                            <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                                        </div>
+
+                                        <div class="chat-body">
+                                            <div class="chat-message">
+                                                <p>Next level veard enim heard of them tofu </p>
+                                            </div>
+                                        </div>
+
+                                        <div id="timeStampOut" class="time semiSC">4:00</div>
+
+                                </ul>
+                            </div>
+            </div>
         </div>
 
 
@@ -35,11 +65,19 @@
             </div>
         </div>
 
+        <button  type="button" class="btn orangeBtn" onclick="submitMessage_form()">Save</button></a>
 
 
 
-    </div>
+
+    </form>
 </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="chat.js"> </script>
+
 
 </body>
 </html>
