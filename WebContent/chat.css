@@ -1,0 +1,13 @@
+
+.chatBox{
+    position: relative;
+    height:555px;
+    width:330px;
+    overflow: scroll;
+}
+
+.form-control {
+    height:30px !important;
+    padding-left: 10px;
+}
+

@@ -212,7 +212,7 @@ input:checked + .slider:before {
 .botbar_text{
     position: relative;
     background-color:#F5F5F5;
-    height:57px;
+    height:65px;
     width:100%;
     display: inline-block;
     border-color: #979797;
