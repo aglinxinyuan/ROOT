@@ -33,11 +33,11 @@ public class SendMessage extends HttpServlet {
 
         try (Connection conn = dataSource.getConnection()) {
             User user = (User) request.getSession().getAttribute("user");
-            String query = "INSERT INTO event(user_id, message) VALUES( ?, ?);";
+            String query = "INSERT INTO message(user_id, message) VALUES( ?, ?);";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setInt(1, user.GetId());
             statement.setString(2, message);
-
+            System.out.println(user.GetName());
 
             System.out.println(statement);
 

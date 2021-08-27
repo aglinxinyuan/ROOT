@@ -20,6 +20,7 @@ $.ajax({
 
 function submitEditProfile_form(){
 
+    console.log("something updated")
     $.ajax(
         "api/editProfile", {
             method: "POST",

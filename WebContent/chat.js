@@ -20,11 +20,12 @@
 
 function submitMessage_form(){
 
+
     $.ajax(
-        "api/editProfile", {
+        "api/message", {
             method: "POST",
             data: $("#message_form").serialize(),
-            success: window.location.replace("chat.html")
+             success: window.location.replace("chat.html")
         }
     );
 
