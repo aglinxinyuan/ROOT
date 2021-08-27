@@ -19,18 +19,23 @@
 
 
 function handleChatResult(resultData) {
+    console.log(resultData);
     let element = $("#messages")
-
-    for (let i = resultData.length-1; i >=0 ; i--) {
+    for (let i = 0 ; i <=resultData.length-1 ; i++) {
         let rowHTML="";
         rowHTML +=
-            '<li><div class="block mb-3">' +
-            '<a href="activity.html?id='+resultData[i]["id"]+'"><img  src="img/gym.png" height = 160 alt=""></a>' +
-            '<div class="eventTitle pl-4"><div id="title" class="semiSC_7">' + resultData[i]["title"] + '</div></div>' +
-            '<div class="eventLocation pl-4"><div id="location" class="semiSC_8"><img class="mr-1" src="img/location.png" height=10 alt="">' + resultData[i]["location"] + '</div></div></li>' ;
+            '<li class ="out">' +
+                '<div class ="chat-img"><img alt="" src="img/julia.png" ></div>' +
+                '<div class="chat-body">' +
+                    '<div class="chat-message"><p>'+ resultData[i]["message"] + '</p></div>' +
+                '</div>' +
+                '<div id="timeStampOut" class="time semiSC">4:00</div>' +
+            '</li>'
         element.append(rowHTML);
     }
 }
+
+
 
 $.ajax({
     dataType: "json", // Setting return data type

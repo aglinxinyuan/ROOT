@@ -4,6 +4,9 @@
     height:555px;
     width:330px;
     overflow: scroll;
+    overflow-x: hidden;
+    padding-bottom:0;
+
 }
 
 .form-control {
@@ -36,7 +39,7 @@
 
 .chat-list .chat-img {
     float: left;
-    width: 48px;
+    width: 35px;
 }
 
 .chat-list .chat-img img {
@@ -54,6 +57,7 @@
     display: inline-block;
     padding: 8px 10px;
     position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.12);
 }
 
 .chat-list .chat-message:before {
@@ -80,6 +84,7 @@
 
 .chat-list .chat-body {
     margin-left: 10px;
+    padding-bottom: 10px;
     float: left;
     width: auto;
     max-width: 60%;
@@ -87,6 +92,10 @@
 
 .chat-list .time{
     float: right;
+}
+
+.li {
+    padding-bottom: 10px;
 }
 
 /*.chat-list .in .chat-message:before {*/
@@ -112,7 +121,7 @@
 }
 
 .chat-list .out .time{
-    float: right;
+    float: left;
 }
 
 /*.chat-list .out .chat-message:before {*/
