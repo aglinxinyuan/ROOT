@@ -3,6 +3,8 @@
     position: relative;
     height:555px;
     width:330px;
+    display: flex;
+    flex-direction: column-reverse;
     overflow: scroll;
     overflow-x: hidden;
     padding-bottom:0;
