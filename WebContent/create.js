@@ -30,14 +30,14 @@ function nextPrev(n) {
     currentTab = currentTab + n;
     // if you have reached the end of the form...
     if (currentTab >= 3) {
-        let formData = new FormData($("#createEvent_form")[0]);
+        // let formData = new FormData($("#createEvent_form")[0]);
         // ... the form gets submitted:
         $.ajax(
             "api/create", {
                 method: "POST",
-                data: formData,
-                contentType: false,
-                processData: false,
+                data: $("#createEvent_form").serialize(),
+                // contentType: false,
+                // processData: false,
                 success: window.location.replace("main.html?#ModalEventCreated")
             }
         );
