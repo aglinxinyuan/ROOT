@@ -41,6 +41,7 @@ public class GetMessage extends HttpServlet {
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("user_id", rs.getString("user_id"));
                 jsonObject.addProperty("message", rs.getString("message"));
+                jsonObject.addProperty("time", rs.getString("time"));
                 jsonArray.add(jsonObject);
             }
             rs.close();

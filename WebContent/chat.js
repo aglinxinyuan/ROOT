@@ -29,7 +29,7 @@ function handleChatResult(resultData) {
                 '<div class="chat-body">' +
                     '<div class="chat-message"><p>'+ resultData[i]["message"] + '</p></div>' +
                 '</div>' +
-                '<div id="timeStampOut" class="time semiSC">4:00</div>' +
+                '<div  class="time semiSC">' + resultData[i]["time"]+ '</div>' +
             '</li>'
         element.append(rowHTML);
     }
@@ -48,7 +48,7 @@ $.ajax({
 
 function submitMessage_form(){
 
-
+   console.log("formsubmitted");
     $.ajax(
         "api/message", {
             method: "POST",

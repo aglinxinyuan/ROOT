@@ -30,15 +30,16 @@ public class SendMessage extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
         String message = request.getParameter("message");
-
+        String time = "need mysql time";
+        int groupid = 1;
         try (Connection conn = dataSource.getConnection()) {
             User user = (User) request.getSession().getAttribute("user");
-            String query = "INSERT INTO message(user_id, message) VALUES( ?, ?);";
+            String query = "INSERT INTO message(user_id, message, group_id , time ) VALUES( ?, ?, ? , ?);";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setInt(1, user.GetId());
             statement.setString(2, message);
-            System.out.println(user.GetName());
-
+            statement.setInt(3, groupid);
+            statement.setString(4, time);
             System.out.println(statement);
 
 

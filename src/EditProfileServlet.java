@@ -38,7 +38,7 @@ public class EditProfileServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String aboutme = request.getParameter("aboutme");
         try (Connection conn = dataSource.getConnection()) {
-            String query = "UPDATE user SET name=?, gender=?, school=?,major=?,birth=?,email=?,phone=?,aboutme=? where id='"+ user.GetId()+"';";
+            String query = "UPDATE user SET name=?, gender=?, school=?,major=?,birth=?,email=?,phone=?,`about me`=? where id='"+ user.GetId()+"';";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1, name);
             statement.setString(2, gender);
@@ -48,6 +48,8 @@ public class EditProfileServlet extends HttpServlet {
             statement.setString(6, email);
             statement.setString(7, phone);
             statement.setString(8, aboutme);
+
+            System.out.println(statement);
 
             statement.executeUpdate();
             statement.close();
