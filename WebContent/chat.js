@@ -23,15 +23,29 @@ function handleChatResult(resultData) {
     let element = $("#messages")
     for (let i = 0 ; i <=resultData.length-1 ; i++) {
         let rowHTML="";
-        rowHTML +=
-            '<li class ="out">' +
+        if(resultData[i]["self"] === 1){
+            rowHTML +=
+                '<li class ="out">' +
                 '<div class ="chat-img"><img alt="" src="img/julia.png" ></div>' +
                 '<div class="chat-body">' +
-                    '<div class="chat-message"><p>'+ resultData[i]["message"] + '</p></div>' +
+                '<div class="chat-message"><p>'+ resultData[i]["message"] + '</p></div>' +
                 '</div>' +
                 '<div  class="time semiSC">' + resultData[i]["time"]+ '</div>' +
-            '</li>'
-        element.append(rowHTML);
+                '</li>'
+            element.append(rowHTML);
+        }
+        else{
+            rowHTML +=
+                '<li class ="in">' +
+                '<div class ="chat-img"><img alt="" src="img/alex.png" ></div>' +
+                '<div class="chat-body">' +
+                '<div class="chat-message"><p>'+ resultData[i]["message"] + '</p></div>' +
+                '</div>' +
+                '<div  class="time semiSC">' + resultData[i]["time"]+ '</div>' +
+                '</li>'
+            element.append(rowHTML);
+        }
+
     }
 }
 
@@ -46,16 +60,17 @@ $.ajax({
 
 
 
-function submitMessage_form(){
+$("#message_form").keypress(function (e) {
+    if (e.which === 13) {
+        console.log("formsubmitted");
+        $.ajax(
+            "api/message", {
+                method: "POST",
+                data: $("#message_form").serialize(),
+                success: window.location.replace("chat.html#")
+            }
+        );
+    }
+});
 
-   console.log("formsubmitted");
-    $.ajax(
-        "api/message", {
-            method: "POST",
-            data: $("#message_form").serialize(),
-             success: window.location.replace("chat.html")
-        }
-    );
-
-}
 

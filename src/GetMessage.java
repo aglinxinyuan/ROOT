@@ -32,6 +32,7 @@ public class GetMessage extends HttpServlet {
         response.setStatus(200);
         try (Connection conn = dataSource.getConnection()) {
             Statement statement = conn.createStatement();
+            User user = (User) request.getSession().getAttribute("user");
             ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.message;");
             JsonArray jsonArray = new JsonArray();
 
@@ -42,6 +43,14 @@ public class GetMessage extends HttpServlet {
                 jsonObject.addProperty("user_id", rs.getString("user_id"));
                 jsonObject.addProperty("message", rs.getString("message"));
                 jsonObject.addProperty("time", rs.getString("time"));
+                // Categorize whether the message was sent by the user who request
+                if (user.GetId() == rs.getInt("user_id")){
+                    jsonObject.addProperty("self", 1);
+                }
+                else{
+                    jsonObject.addProperty("self", 0);
+                }
+
                 jsonArray.add(jsonObject);
             }
             rs.close();

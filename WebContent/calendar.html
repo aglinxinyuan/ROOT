@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+<div class="outer_box">
+    <div class="main_box" >
+        <div class="topbar">
+            <div class="row ml-0 pt-5">
+                <div class="title_centered_white">Event</div>
+            </div>
+            <div class="row ml-0 mt-4">
+                <div class="col-7" >
+                    <div class="searchBar2" >
+                        <div class="searchBox">
+                            <img src="img/search.png"  height=12 alt="" >
+                            <label for="searchInput" class="sr-only">Search</label>
+                            <input name ="searchInput" type="text" id="searchInput" onkeyup = "searchFunction()" placeholder="Search upcoming events" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content pt-3">
+            <div id="events"></div>
+        </div>
+
+
+
+        <div class="botbar">
+            <img src="img/botbar.png" width = 100% alt="">
+            <div class="Navigation">
+                <div class="row navigationRow" >
+                    <div class="col mt-4" ><a href="main.html"><img  src="img/home.png" height=20 alt=""></a></div>
+                    <div class="col mt-4" ><a  href="calendar.html"><img src="img/taskClicked.png" height = 30 alt=""></a></div>
+                    <div class="col" ><a class="btn orangeCircleBtn" HREF="create.html" >+</a></div>
+                    <div class="col mt-4" ><a  href="#"><img src="img/intelligence.png" height = 20 alt=""></a></div>
+                    <div class="col mt-4" ><a  href="profile.html"><img  src="img/profile.png" height = 20 alt=""></a></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="ModalEventCreated" tabindex="-1" role="dialog" aria-labelledby="Term" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content eventCreated">
+            <div class="mt-1"><img src="img/bluecheck.png" width = 65 alt=""></div>
+            <div class="semiSC mb-2 mt-3">Event Created!</div>
+            <div class="pb-3">Congratulation! Make sure to check the join-in request!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="./main.js"></script>
+<script src="./googlemap.js"></script>
+
+</body>
+</html>
