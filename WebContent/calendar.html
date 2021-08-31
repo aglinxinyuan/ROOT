@@ -14,7 +14,7 @@
     <div class="main_box" >
         <div class="topbar">
             <div class="row ml-0 pt-5">
-                <div class="col-12"><div class="title_centered_white">Events</div></div>
+                <div class="col-12"><div class="title_centered_white">Event Manager</div></div>
             </div>
             <div class="row ml-0 mt-4">
                 <div class="col-7" >
@@ -70,13 +70,16 @@
                     <div class="time">16:00</div>
                 </div>
                 <div class="eventcard">
+                    <a data-toggle="modal" data-target="#ModalEventDeleted">
                     <div class="block mb-3 mt-2">
-                    <a href="#"><img  src="img/gym.png" height = 120 alt=""></a>
+<!--                    <a href="#">-->
+                        <img  src="img/gym.png" height = 120 alt="">
+<!--                    </a>-->
                     <div class="eventTitle pl-3"><div id="title" class="semiSC_7">title</div></div>
                     <div class="eventLocation pl-3"><div id="location" class="semiSC_8"><img class="mr-1" src="img/location.png" height=10 alt="">Location</div></div></div>
+                    </a>
                 </div>
             </div>
-
 
         </div>
 
@@ -102,7 +105,7 @@
 
 
 
-<div class="modal fade" id="ModalEventCreated" tabindex="-1" role="dialog" aria-labelledby="Term" aria-hidden="true">
+<div class="modal fade" id="ModalEventDeleted" tabindex="-1" role="dialog" aria-labelledby="Term" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content eventCreated">
             <div class="mt-1"><img src="img/bluecheck.png" width = 65 alt=""></div>
