@@ -1,12 +1,12 @@
 
 .main_box{
-    background-color: white;
+    background-color: #F7F7F7;
 }
 
 .banner{
     position: relative!important;
     height: 150px;
-    background-color: white;
+    background-color: #F7F7F7;
 }
 
 .banner .carousel-inner{
@@ -117,7 +117,6 @@
 
 .content{
     overflow:auto;
-    /*align-items: flex-end;*/
 }
 
 
@@ -298,17 +297,52 @@ li {
 }
 
 button:focus {
-    outline:#1FC6AD;
+    outline:#979797;
 }
 
 
 button:hover{
     cursor: pointer;
-    border: #1FC6AD;
-    outline: #1FC6AD;
+    border: #979797;
+    outline: #979797;
 }
 
 .block .coverImg img{
     min-width: 180px;
     min-height: 90px;
 }
+
+.nav{
+    background-color:  #F7F7F7;
+    border:none;
+
+}
+.nav-item{
+    width:162px;
+    border:none;
+
+
+}
+
+
+.tab-pane{
+    background-color: white;
+    padding: 0;
+    min-height: 400px;
+
+}
+.tab-content{
+
+
+}
+
+
+.botbar{
+    /*background-color: t;*/
+
+}
+
+.semiSC_4{
+    text-align: center;
+}
+
