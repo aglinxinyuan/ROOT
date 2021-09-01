@@ -133,20 +133,35 @@ li {
     list-style-type: none;
 }
 
-.eventCreated {
-    height:200px;
-    width: 180px;
+.eventDelete {
+    height:310px;
+    width: 250px;
     padding: 20px;
     margin: 0 auto;
     background-color: #fff;
-    opacity:0.8;
+    opacity:1;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 0;
     color: #979797;
+    align-items: center;
 }
 
 .modal-backdrop
 {
-    opacity:0.2 !important;
+    opacity:0.5 !important;
+}
+
+.orangeBtn{
+    height:25px;
+    width: 180px;
+    font-size: 10px;
+    box-shadow: none;
+}
+
+.greyBtn{
+    height:25px;
+    width: 180px;
+    font-size: 10px;
+    color: #B8B8B8;
 }
