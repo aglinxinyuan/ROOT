@@ -50,29 +50,27 @@
 // });
 
 
-function searchFunction() {
-    let input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("events");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("div")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
+// function searchFunction() {
+//     let input, filter, ul, li, a, i, txtValue;
+//     input = document.getElementById("searchInput");
+//     filter = input.value.toUpperCase();
+//     ul = document.getElementById("events");
+//     li = ul.getElementsByTagName("li");
+//     for (i = 0; i < li.length; i++) {
+//         a = li[i].getElementsByTagName("div")[0];
+//         txtValue = a.textContent || a.innerText;
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             li[i].style.display = "";
+//         } else {
+//             li[i].style.display = "none";
+//         }
+//     }
+// }
+//
 
-
-
-const card = document.querySelector(".card__inner");
-
-card.addEventListener("click", function (e) {
+// Select all the same element class, and grant them click function
+const card = document.querySelectorAll(".card__inner");
+card.forEach(card =>card.addEventListener("click", function (e) {
     card.classList.toggle('is-flipped');
-});
-
+}));
 

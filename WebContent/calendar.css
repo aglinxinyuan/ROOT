@@ -34,7 +34,7 @@
 .eventDetail{
     position: relative!important;
     height:130px;
-    background-color: #1FC6AD;
+    /*background-color: #1FC6AD;*/
     display: inline-block!important;
 }
 
@@ -47,18 +47,10 @@
 
 }
 
-.eventcard{
-    height:100px;
-    width:220px;
-    margin-top:10px;
-}
 
 
 .block{
     position: relative !important;
-    height:90px;
-    width:180px;
-    margin: auto !important;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius:15px;
@@ -70,12 +62,12 @@
 
 .eventTitle{
     position: absolute !important;
-    top:60%;
+    top:50%;
 }
 
 .eventLocation{
     position: absolute !important;
-    top:78%;
+    top:72%;
     align-items: normal;
 }
 
@@ -168,10 +160,12 @@ li {
 
 
 .card {
-    margin: 100px auto 0;
-    width: 400px;
-    height: 600px;
+    margin: 0;
+    width: 180px;
+    height: 90px;
     perspective: 1000px;
+    border: none;
+
 }
 
 .card__inner {
@@ -184,7 +178,7 @@ li {
 }
 
 .card__inner.is-flipped {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 
 
@@ -236,7 +230,7 @@ li {
     bottom: 0;
     background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
     z-index: -1;
-    border-radius: 0px 0px 50% 0px;
+    border-radius: 0 0 50% 0;
 }
 
 .pp {
@@ -263,14 +257,58 @@ li {
 }
 
 .card__body h3 {
-    color: var(--dark);
+    /*color: var(--dark);*/
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
 .card__body p {
-    color: var(--dark);
+    /*color: var(--dark);*/
     font-size: 18px;
     line-height: 1.4;
+}
+
+.redButton{
+    height:90px;
+    width:30px;
+    background-color: #FD716A;
+    border: none;
+    z-index: 7;
+    padding: 0;
+
+}
+
+.yellowButton{
+    height:90px;
+    width:30px;
+    background-color:#FEBD2C;
+    border: none;
+    z-index: 7;
+    padding: 0;
+}
+
+
+
+.smallBlock{
+    width:100px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+button:focus {
+    outline:#1FC6AD;
+}
+
+
+button:hover{
+    cursor: pointer;
+    border: #1FC6AD;
+    outline: #1FC6AD;
+}
+
+.block .coverImg img{
+    min-width: 180px;
+    min-height: 90px;
 }
