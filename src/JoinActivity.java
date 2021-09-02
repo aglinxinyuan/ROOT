@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -25,7 +26,7 @@ public class JoinActivity extends HttpServlet {
         }
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
 
         int id = Integer.parseInt(request.getParameter("id"));
@@ -39,7 +40,12 @@ public class JoinActivity extends HttpServlet {
             System.out.println(statement);
             statement.executeUpdate();
             statement.close();
+
+            PrintWriter out = response.getWriter();
+            out.write("<html><head><meta http-equiv=\"refresh\" content=\"0; url='../activity.html?id="+id+"'\" /></head></html>");
             response.setStatus(200);
+            out.close();
+
         } catch (Exception e) {
             response.getWriter().write(e.getMessage());
             response.setStatus(500);

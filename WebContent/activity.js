@@ -14,7 +14,11 @@ function handleMainResult(resultData) {
             btn.text("Joined")
         }
         else{
-            btn.html('<a href="api/join"'+window.location.search+'">Join</a>')
+            btn.html('<a href="api/join'+window.location.search+'">Join</a>')
+            btn.click(function() {
+                window.location.replace('activity.html'+window.location.search);
+            });
+
         }
 }
 
