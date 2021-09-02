@@ -34,12 +34,11 @@ public class SendMessage extends HttpServlet {
         int groupid = 1;
         try (Connection conn = dataSource.getConnection()) {
             User user = (User) request.getSession().getAttribute("user");
-            String query = "INSERT INTO message(user_id, message, group_id , time ) VALUES( ?, ?, ? , ?);";
+            String query = "INSERT INTO message(user_id, message, group_id) VALUES( ?, ?, ?);";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setInt(1, user.GetId());
             statement.setString(2, message);
             statement.setInt(3, groupid);
-            statement.setString(4, time);
             System.out.println(statement);
 
 
