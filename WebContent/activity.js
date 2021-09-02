@@ -1,3 +1,4 @@
+let btn =$('.btn');
 function handleMainResult(resultData) {
     console.log(resultData);
     $("#activityTitle").text(resultData['title'])
