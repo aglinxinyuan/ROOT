@@ -54,6 +54,7 @@ public class GetEventJoined extends HttpServlet {
             }
 
             rs.close();
+            rs2.close();
             statement.close();
 
             // write JSON string to output

@@ -1,53 +1,62 @@
 function handleCalendarResult(resultData) {
-    let element = $("#events");
-    const d = new Date();
+    let element = $("#eventsjoined");
+    console.log(resultData);
 
-    let month = [];
-    month[0] = "01";
-    month[1] = "02";
-    month[2] = "03";
-    month[3] = "04";
-    month[4] = "05";
-    month[5] = "06";
-    month[6] = "07";
-    month[7] = "08";
-    month[8] = "09";
-    month[9] = "10";
-    month[10] = "11";
-    month[11] = "12";
-
-    const date = d.getFullYear() + month[d.getMonth()] + d.getDate();
-    for (let i = resultData.length-1; i >=0 ; i--) {
+    for (let i = 0; i <= resultData.length-1 ; i++) {
         let rowHTML;
-        if (date<=resultData[i]["date"]) rowHTML = '<li><div class="block mb-3">';
-        else rowHTML = '<li><div class="block grayout mb-3">';
+        rowHTML = '<li> <div class="eventDetial row">';
         rowHTML +=
-            '<a href="activity.html?id='+resultData[i]["id"]+'"><img  src="img/gym.png" height = 160 alt=""></a>' +
-            '<div class="eventTitle pl-4"><div id="title" class="semiSC_7">' + resultData[i]["title"] + '</div></div>' +
-            '<div class="eventLocation pl-4"><div id="location" class="semiSC_8"><img class="mr-1" src="img/location.png" height=10 alt="">' + resultData[i]["location"] + '</div></div></li>' ;
+            '<div class="timeline">' +
+                '<div class="month semiSC">Oct</div>' +
+                '<div class="date semiSC">16</div>' +
+                '<div class="time">16:00</div>' +
+            '</div>' +
+            '<div class="card ml-3 mt-3">'+
+                '<div class="card__inner">'+
+                    '<div class="card__face card__face--front">'+
+                        '<div class="block">'+
+                           ' <div class="coverImg"><img src="img/gym.png" height=90 alt=""></div>'+
+                            '<div class="eventTitle pl-3">'+
+                                '<div id="title" class="semiSC_7">'+ resultData[i]["title"] +'</div>'+
+                           '</div>'+
+                            '<div class="eventLocation pl-3">'+
+                                '<div id="location" class="semiSC_8"><img class="mr-1" src="img/location.png" height=10 alt="">'+ resultData[i]["location"] +'</div>'+
+                           '</div>'+
+                       '</div>'+
+                    '</div>'+
+                    '<div class="card__face card__face--back">'+
+                        '<div class="block row">'+
+                            '<div class="smallBlock col-6"><img src="img/gym.png" height=90 alt=""></div>'+
+                            '<button class="yellowButton col-3"><img src="img/edit.png" height=20 alt=""></button>'+
+                            '<button class="redButton col-3" data-toggle="modal" data-target="#ModalEventDeleted">'+
+                                '<img src="img/delete.png" height=20 alt=""></button>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</div>'+
+        '</div>';
         element.append(rowHTML);
     }
+
+    // Select all the same element class, and grant them click function
+    const card = document.querySelectorAll(".card__inner");
+    card.forEach(card =>card.addEventListener("click", function (e) {
+        card.classList.toggle('is-flipped');
+    }));
+
 }
+
+
+
 
 $.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "api/eventjoined", // Setting request url, which is mapped by StarsServlet in Stars.java
+    url: "api/event", // Setting request url, which is mapped by StarsServlet in Stars.java
     success: (resultData) => handleCalendarResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
 
 
-// Show the ModalEventCreated if a new event is created.
-$(document).ready(function() {
-    if(window.location.href.indexOf('#ModalEventCreated') !== -1) {
-        $('#ModalEventCreated').modal('show');
-
-        $(document.body).click(function() {
-            window.location.replace('main.html');
-        });
-    }
-
-});
 
 
 // function searchFunction() {
@@ -68,9 +77,4 @@ $(document).ready(function() {
 // }
 //
 
-// Select all the same element class, and grant them click function
-const card = document.querySelectorAll(".card__inner");
-card.forEach(card =>card.addEventListener("click", function (e) {
-    card.classList.toggle('is-flipped');
-}));
 

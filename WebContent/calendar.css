@@ -67,7 +67,10 @@
 
 .eventLocation{
     position: absolute !important;
-    top:72%;
+    width:180px;
+    height: 18px;
+    overflow: hidden;
+    top:80%;
     align-items: normal;
 }
 
