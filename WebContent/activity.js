@@ -13,7 +13,7 @@ function handleMainResult(resultData) {
             btn.text("Joined")
         }
         else{
-            btn.html('<a herf="api/joinevent"'+window.location.search+'">Join</a>')
+            btn.html('<a herf="api/join"'+window.location.search+'">Join</a>')
         }
 }
 

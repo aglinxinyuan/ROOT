@@ -34,6 +34,8 @@ public class GetActivity extends HttpServlet {
         try (Connection conn = dataSource.getConnection()) {
             Statement statement = conn.createStatement();
             String id = request.getParameter("id");
+            User user = (User) request.getSession().getAttribute("user");
+
             ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.event where id="+id+";");
             System.out.println("getting!");
             // Iterate through each row of rs
@@ -48,14 +50,15 @@ public class GetActivity extends HttpServlet {
             jsonObject.addProperty("time", rs.getString("time"));
             jsonObject.addProperty("skill", rs.getString("skill"));
             jsonObject.addProperty("capacity", rs.getString("capacity"));
+
+
+//            statement = conn.createStatement();
+
+            rs = statement.executeQuery("SELECT * FROM ezcross.event_user where event_id="+id+" and user_id="+ user.GetId()+";");
+            jsonObject.addProperty("joined", rs.next());
+            System.out.println("getting!");
+
             rs.close();
-
-
-            statement = conn.createStatement();
-            //User user = (User) request.getSession().getAttribute("user");
-            //rs = statement.executeQuery("SELECT * FROM ezcross.event_user where event_id="+id+" user_id="+);
-            //jsonObject.addProperty("joined", rs.next());
-
             statement.close();
 
 
