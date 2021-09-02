@@ -49,7 +49,18 @@ public class GetActivity extends HttpServlet {
             jsonObject.addProperty("skill", rs.getString("skill"));
             jsonObject.addProperty("capacity", rs.getString("capacity"));
             rs.close();
+
+
+            statement = conn.createStatement();
+            //User user = (User) request.getSession().getAttribute("user");
+            //rs = statement.executeQuery("SELECT * FROM ezcross.event_user where event_id="+id+" user_id="+);
+            //jsonObject.addProperty("joined", rs.next());
+
             statement.close();
+
+
+
+
             // write JSON string to output
             out.write(jsonObject.toString());
             // set response status to 200 (OK)

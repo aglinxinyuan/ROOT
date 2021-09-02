@@ -35,6 +35,9 @@ public class GetEvent extends HttpServlet {
             JsonArray jsonArray = new JsonArray();
 
             // Iterate through each row of rs
+            if (rs.next()) out.write("joined");
+            else out.write("join now");
+
             while (rs.next()) {
                 // Create a JsonObject based on the data we retrieve from rs
                 JsonObject jsonObject = new JsonObject();

@@ -6,6 +6,14 @@ function handleMainResult(resultData) {
     $("#time").text(resultData['date'])
     $("#location").text(resultData['location'])
     $("#about").text(resultData['description'])
+
+        if (resultData['joined']) {
+            btn.addClass('disabled')
+            btn.text("Joined")
+        }
+        else{
+            btn.html('<a herf="api/joinevent"'+window.location.search+'">Join</a>')
+        }
 }
 
 $.ajax({
@@ -16,16 +24,4 @@ $.ajax({
 });
 
 
-let btn = $('.btn');
-btn.click(function(){
-    $(this).addClass('disabled');
-    $(this).text("Joined")
-    sessionStorage.setItem(window.location.search, "joined");
-});
 
-if(sessionStorage.getItem(window.location.search)==="joined")
-{
-
-    btn.addClass('disabled');
-    btn.text("Joined")
-}
