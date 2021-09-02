@@ -11,10 +11,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 
-//import org.apache.commons.fileupload.servlet.ServletFileUpload;
-//import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-//import org.apache.commons.fileupload.*;
-
 @WebServlet(name = "JoinActivity", urlPatterns = "/api/join")
 public class JoinActivity extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -35,7 +31,7 @@ public class JoinActivity extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         User user = (User) request.getSession().getAttribute("user");
         try (Connection conn = dataSource.getConnection()) {
-            String query = "INSERT INTO event_user(event_id,user_id) VALUES(?, ?);";
+            String query = "INSERT INTO ezcross.event_user(event_id,user_id) VALUES(?,?);";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setInt(1, id);
             statement.setInt(2, user.GetId());

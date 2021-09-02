@@ -37,7 +37,6 @@ public class GetActivity extends HttpServlet {
             User user = (User) request.getSession().getAttribute("user");
 
             ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.event where id="+id+";");
-            System.out.println("getting!");
             // Iterate through each row of rs
             rs.next();
             // Create a JsonObject based on the data we retrieve from rs
@@ -52,11 +51,9 @@ public class GetActivity extends HttpServlet {
             jsonObject.addProperty("capacity", rs.getString("capacity"));
 
 
-//            statement = conn.createStatement();
-
             rs = statement.executeQuery("SELECT * FROM ezcross.event_user where event_id="+id+" and user_id="+ user.GetId()+";");
             jsonObject.addProperty("joined", rs.next());
-            System.out.println("getting!");
+
 
             rs.close();
             statement.close();

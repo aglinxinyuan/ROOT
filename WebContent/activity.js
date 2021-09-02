@@ -1,5 +1,6 @@
 let btn =$('.btn');
 function handleMainResult(resultData) {
+    console.log("this happened 1");
     console.log(resultData);
     $("#activityTitle").text(resultData['title'])
     $("#name").text(resultData['creator'])
@@ -13,7 +14,7 @@ function handleMainResult(resultData) {
             btn.text("Joined")
         }
         else{
-            btn.html('<a herf="api/join"'+window.location.search+'">Join</a>')
+            btn.html('<a href="api/join"'+window.location.search+'">Join</a>')
         }
 }
 
