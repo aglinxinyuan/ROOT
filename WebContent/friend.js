@@ -6,9 +6,9 @@ function handleUserListResult(resultData) {
 
     for (let i = 0; i <=resultData.length-1 ; i++) {
         let rowHTML;
-        rowHTML = '<li><div class="block mb-3">';
+        rowHTML ="";
         rowHTML +=
-            '<div class="row friendBox mb-1 pl-3">'+
+            '<li><div class="row friendBox mb-1 pl-3">'+
             '<div class="col-3 mt-2 pl-2 pr-0"><span class="person"><img id="person" src="img/alex.png" height=65% alt=""></span></div>'+
             '<div class="col-9 mt-2 pl-0 pr-0">'+
             '<div class="row pt-2">'+
@@ -22,7 +22,7 @@ function handleUserListResult(resultData) {
             '</div>'+
             '</div>'+
             '</div>'+
-            '</div>';
+            '</div></li>';
         element.append(rowHTML);
     }
 
@@ -39,4 +39,23 @@ $.ajax({
     url: "api/userlist", // Setting request url, which is mapped by StarsServlet in Stars.java
     success: (resultData) => handleUserListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
+
+
+function searchFunction() {
+    let input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("name");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("div")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
 
