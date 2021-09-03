@@ -13,8 +13,11 @@ function handleUserListResult(resultData) {
             '<div class="col-3 mt-3 pl-2 pr-0"><img id="person" src="img/alex.png" height=65% alt=""></div>'+
             '<div class="col-9 mt-2 pl-0 pr-0">'+
             '<div class="row pt-2">'+
-            '<div class="col">'+
-            '<div id="name" class="semiSC_5 ">'+ resultData[i]["name"]+'</div> <button class="btn orangeBtn">Add</button>'+
+            '<div class="col-6">'+
+            '<div id="name" class="semiSC_5 ">'+ resultData[i]["name"]+'</div>'+
+            '</div>'+
+            '<div class="col-6">'+
+            '<button class="btn orangeBtn">Add</button>'+
             '</div>'+
             '</div>'+
             '<div class="row mt-1">'+
