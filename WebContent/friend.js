@@ -14,7 +14,7 @@ function handleUserListResult(resultData) {
             '<div class="col-9 mt-2 pl-0 pr-0">'+
             '<div class="row pt-2">'+
             '<div class="col">'+
-            '<div id="name" class="semiSC_5 ">'+ resultData[i]["name"]+'</div>'+
+            '<div id="name" class="semiSC_5 ">'+ resultData[i]["name"]+'</div> <button class="btn orangeBtn">Add</button>'+
             '</div>'+
             '</div>'+
             '<div class="row mt-1">'+

@@ -40,6 +40,7 @@ public class GetUserList extends HttpServlet {
             while (rs.next()) {
                 // Create a JsonObject based on the data we retrieve from rs
                 JsonObject jsonObject = new JsonObject();
+                jsonObject.addProperty("id", rs.getInt("id"));
                 jsonObject.addProperty("name", rs.getString("name"));
                 jsonObject.addProperty("email", rs.getString("email"));
 //                jsonObject.addProperty("school", rs.getString("school"));
