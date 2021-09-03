@@ -37,7 +37,7 @@ function handleCalendarResult(resultData) {
                         '<div class="block row">'+
                             '<div class="smallBlock col-6"><img src="img/gym.png" height=90 alt=""></div>'+
                             '<button class="yellowButton col-3"><img src="img/edit.png" height=20 alt=""></button>'+
-                            '<button class="redButton col-3" data-toggle="modal" data-target="#ModalEventDeleted?id='+resultData[i]["id"]+'>'+
+                            '<button class="redButton col-3" data-toggle="modal" data-target="#ModalEventDeleted?id='+resultData[i]["id"]+'">'+
                                 '<img src="./img/delete.png" height=20 alt=""></button>'+
                         '</div>'+
                     '</div>'+
