@@ -1,15 +1,24 @@
 function handleCalendarResult(resultData) {
     let element = $("#eventsjoined");
     console.log(resultData);
+    // let months = [ "January", "February", "March", "April", "May", "June",
+    //     "July", "August", "September", "October", "November", "December" ];
 
     for (let i = 0; i <= resultData.length-1 ; i++) {
+
+        let year = resultData[i]['date'].substring(0,4);
+        // let month = months[value[resultData[i]['date'].substring(5,6)]];
+        let month = resultData[i]['date'].substring(4,6);
+        let day = resultData[i]['date'].substring(6,8);
+
         let rowHTML;
         rowHTML = '<li> <div class="eventDetial row">';
         rowHTML +=
             '<div class="timeline">' +
-                '<div class="month semiSC">Oct</div>' +
-                '<div class="date semiSC">16</div>' +
-                '<div class="time">16:00</div>' +
+                '<div class="month semiSC">'+year+'</div>' +
+                '<div class="month semiSC">'+month+'</div>' +
+                '<div class="date semiSC">'+day+'</div>' +
+                '<div class="time">'+ resultData[i]['time']+'</div>' +
             '</div>' +
             '<div class="card ml-3 mt-3">'+
                 '<div class="card__inner">'+
@@ -57,6 +66,10 @@ $.ajax({
 });
 
 
+
+function UnjoinEvent(){
+    console.log("buttonclicked");
+}
 
 
 // function searchFunction() {

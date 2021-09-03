@@ -15,8 +15,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-@WebServlet(name = "GetEventJoined", urlPatterns = "/api/eventjoined")
-public class GetEventJoined extends HttpServlet {
+@WebServlet(name = "GetUserList", urlPatterns = "/api/userlist")
+public class GetUserList extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private DataSource dataSource;
 
@@ -30,28 +30,26 @@ public class GetEventJoined extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter out = response.getWriter();
         response.setStatus(200);
-        User user = (User) request.getSession().getAttribute("user");
         try (Connection conn = dataSource.getConnection()) {
             Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.event INNER JOIN ezcross.event_user on ezcross.event.id = ezcross.event_user.event_id WHERE ezcross.event_user.user_id="+user.GetId()+" ORDER BY ezcross.event.date ASC;");
-//            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.event;");
+            User user = (User) request.getSession().getAttribute("user");
+            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.user;");
             JsonArray jsonArray = new JsonArray();
 
             // Iterate through each row of rs
             while (rs.next()) {
                 // Create a JsonObject based on the data we retrieve from rs
                 JsonObject jsonObject = new JsonObject();
-                jsonObject.addProperty("id", rs.getString("id"));
-                jsonObject.addProperty("title", rs.getString("title"));
-                jsonObject.addProperty("location", rs.getString("location"));
-                String data = rs.getString("date");
-                jsonObject.addProperty("date", data.substring(0,4)+data.substring(5,7)+data.substring(8,10));
-                String timedata = rs.getString("time");
-                jsonObject.addProperty("time", timedata.substring(0,5));
+                jsonObject.addProperty("name", rs.getString("name"));
+                jsonObject.addProperty("email", rs.getString("email"));
+//                jsonObject.addProperty("school", rs.getString("school"));
+//                jsonObject.addProperty("gender", rs.getString("gender"));
+//                jsonObject.addProperty("major", rs.getString("major"));
+//                jsonObject.addProperty("birth", rs.getString("birth"));
+//                jsonObject.addProperty("phone", rs.getString("phone"));
+//                jsonObject.addProperty("aboutme", rs.getString("about me"));
                 jsonArray.add(jsonObject);
-
             }
-
             rs.close();
             statement.close();
 
