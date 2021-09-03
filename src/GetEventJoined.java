@@ -33,28 +33,23 @@ public class GetEventJoined extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
         try (Connection conn = dataSource.getConnection()) {
             Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.event;");
-            ResultSet rs2 = statement.executeQuery("SELECT * FROM ezcross.event_user WHERE user_id="+ user.GetId()+";");
+            ResultSet rs = statement.executeQuery("use ezcross; select event.title, event.location, event.date,event.time, event_user.event_id FROM event Left Join event_user on event.id=event_user.event_id where event_user.user_id=19;");
             JsonArray jsonArray = new JsonArray();
 
             // Iterate through each row of rs
-            while (rs2.next())  {
-                while (rs.next()) {
-                    // Create a JsonObject based on the data we retrieve from rs
-                    if (rs2.getString("event_id").equals(rs.getString("id"))){
-                        JsonObject jsonObject = new JsonObject();
-                        jsonObject.addProperty("id", rs.getString("id"));
-                        jsonObject.addProperty("title", rs.getString("title"));
-                        jsonObject.addProperty("location", rs.getString("location"));
-                        String data = rs.getString("date");
-                        jsonObject.addProperty("date", data.substring(0,4)+data.substring(5,7)+data.substring(8,10));
-                        jsonArray.add(jsonObject);
-                    }
-                }
+            while (rs.next()) {
+                // Create a JsonObject based on the data we retrieve from rs
+                JsonObject jsonObject = new JsonObject();
+                jsonObject.addProperty("id", rs.getString("event_id"));
+                jsonObject.addProperty("title", rs.getString("title"));
+                jsonObject.addProperty("location", rs.getString("location"));
+                String data = rs.getString("date");
+                jsonObject.addProperty("date", data.substring(0,4)+data.substring(5,7)+data.substring(8,10));
+                jsonArray.add(jsonObject);
+
             }
 
             rs.close();
-            rs2.close();
             statement.close();
 
             // write JSON string to output

@@ -52,7 +52,7 @@ function handleCalendarResult(resultData) {
 $.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "api/event", // Setting request url, which is mapped by StarsServlet in Stars.java
+    url: "api/eventjoined", // Setting request url, which is mapped by StarsServlet in Stars.java
     success: (resultData) => handleCalendarResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
 
