@@ -8,8 +8,9 @@ function handleUserListResult(resultData) {
         let rowHTML;
         rowHTML ="";
         rowHTML +=
-            '<li><div class="row friendBox mb-1 pl-3">'+
-            '<div class="col-3 mt-2 pl-2 pr-0"><span class="person"><img id="person" src="img/alex.png" height=65% alt=""></span></div>'+
+            '<li style="display: none"><div class="friendBox mb-3 pl-3">'+
+            '<div class="row">'+
+            '<div class="col-3 mt-3 pl-2 pr-0"><img id="person" src="img/alex.png" height=65% alt=""></div>'+
             '<div class="col-9 mt-2 pl-0 pr-0">'+
             '<div class="row pt-2">'+
             '<div class="col">'+
@@ -22,7 +23,7 @@ function handleUserListResult(resultData) {
             '</div>'+
             '</div>'+
             '</div>'+
-            '</div></li>';
+            '</div></div></li>';
         element.append(rowHTML);
     }
 
@@ -45,13 +46,13 @@ function searchFunction() {
     let input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("searchInput");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("name");
+    ul = document.getElementById("userlist");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("div")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
+            li[i].style.display = "block";
         } else {
             li[i].style.display = "none";
         }
