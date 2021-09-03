@@ -640,3 +640,8 @@ input:checked + .slider:before {
     background-color: white;
 
 }
+
+
+li {
+    list-style-type: none;
+}

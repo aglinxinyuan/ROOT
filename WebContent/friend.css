@@ -9,6 +9,9 @@
     padding: 12px;
 }
 
+.content{
+    overflow: scroll;
+}
 
 .searchBox2 > input{
     flex: 1;
@@ -25,10 +28,10 @@
 .friendBox{
     position: relative!important;
     height: 80px;
-    width: 290px;
+    width: 270px;
     border-radius: 15px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-right: 20px;
-    background-color: #F7F7F7;
+    background-color: #FFFFFF;
 }
 
