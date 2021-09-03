@@ -1,4 +1,6 @@
+.topbar{
 
+}
 .searchBox2{
     width: 250px !important;
     height: 16px !important;
@@ -10,7 +12,8 @@
 }
 
 .content{
-    overflow: scroll;
+    overflow: auto;
+    z-index:3
 }
 
 .searchBox2 > input{
@@ -32,6 +35,6 @@
     border-radius: 15px;
     margin-left: 30px;
     margin-right: 20px;
-    background-color: #FFFFFF;
+    background-color: white;
 }
 

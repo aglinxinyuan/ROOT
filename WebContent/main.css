@@ -74,6 +74,7 @@
 
 .content{
     overflow:auto;
+    z-index:3
     /*align-items: flex-end;*/
 }
 
