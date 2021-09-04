@@ -2,21 +2,7 @@ function handleMainResult(resultData) {
     let element = $("#events");
     const d = new Date();
 
-    let month = [];
-    month[0] = "01";
-    month[1] = "02";
-    month[2] = "03";
-    month[3] = "04";
-    month[4] = "05";
-    month[5] = "06";
-    month[6] = "07";
-    month[7] = "08";
-    month[8] = "09";
-    month[9] = "10";
-    month[10] = "11";
-    month[11] = "12";
-
-    const date = d.getFullYear() + month[d.getMonth()] + d.getDate();
+    const date = d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0');
     for (let i = resultData.length-1; i >=0 ; i--) {
         let rowHTML;
         if (date<=resultData[i]["date"]) rowHTML = '<li><div class="block mb-3">';
