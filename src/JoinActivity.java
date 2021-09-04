@@ -28,16 +28,13 @@ public class JoinActivity extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
-
         int id = Integer.parseInt(request.getParameter("id"));
         User user = (User) request.getSession().getAttribute("user");
         try (Connection conn = dataSource.getConnection()) {
-            String query = "INSERT INTO ezcross.event_user(event_id,user_id) VALUES(?,?);";
+            String query = "INSERT INTO event_user(event_id,user_id) VALUES(?,?);";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setInt(1, id);
             statement.setInt(2, user.GetId());
-
-            System.out.println(statement);
             statement.executeUpdate();
             statement.close();
 

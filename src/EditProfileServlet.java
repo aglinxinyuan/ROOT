@@ -13,9 +13,7 @@ import java.sql.PreparedStatement;
 @WebServlet(name = "EditProfileServlet", urlPatterns = "/api/editProfile")
 public class EditProfileServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    // Create a dataSource which registered in web.
     private DataSource dataSource;
-
     public void init(ServletConfig config) {
         try {
             dataSource = (DataSource) new InitialContext().lookup("java:comp/env/jdbc/ez-cross");
@@ -27,7 +25,6 @@ public class EditProfileServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
-
         User user = (User) request.getSession().getAttribute("user");
         String name = request.getParameter("name");
         String gender = request.getParameter("gender");
@@ -48,9 +45,7 @@ public class EditProfileServlet extends HttpServlet {
             statement.setString(6, email);
             statement.setString(7, phone);
             statement.setString(8, aboutme);
-
             System.out.println(statement);
-
             statement.executeUpdate();
             statement.close();
             response.setStatus(200);

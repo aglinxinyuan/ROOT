@@ -1,6 +1,4 @@
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.ServletConfig;
@@ -14,11 +12,9 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
 @WebServlet(name = "GetActivity", urlPatterns = "/api/activity")
 public class GetActivity extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    // Create a dataSource which registered in web.
     private DataSource dataSource;
 
     public void init(ServletConfig config) {
@@ -37,9 +33,7 @@ public class GetActivity extends HttpServlet {
             User user = (User) request.getSession().getAttribute("user");
 
             ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.event where id="+id+";");
-            // Iterate through each row of rs
             rs.next();
-            // Create a JsonObject based on the data we retrieve from rs
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("creator", rs.getString("creator"));
             jsonObject.addProperty("title", rs.getString("title"));
@@ -50,20 +44,12 @@ public class GetActivity extends HttpServlet {
             jsonObject.addProperty("skill", rs.getString("skill"));
             jsonObject.addProperty("capacity", rs.getString("capacity"));
 
-
             rs = statement.executeQuery("SELECT * FROM ezcross.event_user where event_id="+id+" and user_id="+ user.GetId()+";");
             jsonObject.addProperty("joined", rs.next());
-
-
             rs.close();
             statement.close();
 
-
-
-
-            // write JSON string to output
             out.write(jsonObject.toString());
-            // set response status to 200 (OK)
             response.setStatus(200);
 
         } catch (Exception e) {
