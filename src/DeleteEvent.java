@@ -41,6 +41,9 @@ public class DeleteEvent extends HttpServlet {
             statement.close();
 
             // set response status to 200 (OK)
+
+            PrintWriter fresh = response.getWriter();
+            fresh.write("<html><head><meta http-equiv=\"refresh\" content=\"0; url='../calendar.html'\" /></head></html>");
             response.setStatus(200);
 
         } catch (Exception e) {
