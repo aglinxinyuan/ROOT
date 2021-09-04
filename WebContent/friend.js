@@ -16,8 +16,7 @@ function handleUserListResult(resultData) {
             '<div class="col-6">'+
             '<div id="name" class="semiSC_5 ">'+ resultData[i]["name"]+'</div>'+
             '</div>'+
-            '<div class="col-6">'+
-            '<button class="btn orangeBtn">Add</button>'+
+            '<div class="col-6" id="addFriend">'+
             '</div>'+
             '</div>'+
             '<div class="row mt-1">'+
@@ -29,9 +28,6 @@ function handleUserListResult(resultData) {
             '</div></div></li>';
         element.append(rowHTML);
     }
-
-
-
 
 
 
@@ -61,5 +57,12 @@ function searchFunction() {
         }
     }
 }
+
+
+function addFriend(id) {
+
+    $('#addFriend').html('<a type="button" class="btn addBtn" href="api/addFriend?id='+id+'">Delete</a>')
+}
+
 
 
