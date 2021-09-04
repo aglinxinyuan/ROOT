@@ -12,10 +12,10 @@ function handleFriendListResult(resultData) {
             '<div class="col-3 mt-3 pl-2 pr-0"><img id="person" src="img/alex.png" height=65% alt=""></div>'+
             '<div class="col-9 mt-2 pl-0 pr-0">'+
             '<div class="row pt-2">'+
-            '<div class="col-6">'+
+            '<div class="col-8">'+
             '<div id="name" class="semiSC_5 ">'+ resultData[i]["name"]+'</div>'+
             '</div>'+
-            '<div class="col-6">'+
+            '<div class="col-4">'+
             '<button  class="btn addBtn" >Chat</button>' +
             '</div>'+
             '</div>'+
@@ -45,7 +45,7 @@ function searchFunction() {
     let input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("searchInput");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("userlist");
+    ul = document.getElementById("friendlist");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("div")[0];

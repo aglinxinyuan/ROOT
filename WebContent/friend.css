@@ -46,6 +46,12 @@
     width:45px;
     height: 30px;
     font-size: 12px;
-    text-align: center;
+    text-align: left;
+    border: none;
+    font-family: "Poppins-SemiBold", sans-serif;
+    color:#fff;
+    border-radius: 28px;
+    background-image: linear-gradient(45deg,#fd9568,#fece63);
+    box-shadow: 0 8px 2px -2px rgba(254, 211, 99, 0.5);
 }
 
