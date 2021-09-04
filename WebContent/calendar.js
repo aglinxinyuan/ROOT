@@ -38,6 +38,7 @@ function handleCalendarResult(resultData) {
                             '<div class="smallBlock col-6"><img src="img/gym.png" height=90 alt=""></div>'+
                             '<button class="yellowButton col-3"><img src="img/edit.png" height=20 alt=""></button>'+
                             '<button class="redButton col-3" data-toggle="modal" data-target="#ModalEventDeleted?">'+
+                            '<button class="redButton col-3" onclick="openModal('+resultData[i]['id']+')">'+
                                 '<img src="./img/delete.png" height=20 alt=""></button>'+
                         '</div>'+
                     '</div>'+
@@ -55,8 +56,10 @@ function handleCalendarResult(resultData) {
 
 }
 
-
-
+function openModal(id) {
+    $('#ModalEventDeleted').modal('show')
+    $('#delete').html('<a type="button" class="btn greyBtn" href="api/deleteEvent?id='+id+'">Delete</a>')
+}
 
 $.ajax({
     dataType: "json", // Setting return data type
