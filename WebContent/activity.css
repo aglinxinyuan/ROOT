@@ -38,3 +38,8 @@
     border-radius: 28px!important;
     background-color: #CCCCCC!important;
 }
+
+a {
+    text-decoration: none !important;
+    color:white;
+}

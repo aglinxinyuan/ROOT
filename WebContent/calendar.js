@@ -1,6 +1,6 @@
 function handleCalendarResult(resultData) {
     let element = $("#eventsjoined");
-    console.log(resultData);
+
     // let months = [ "January", "February", "March", "April", "May", "June",
     //     "July", "August", "September", "October", "November", "December" ];
 
