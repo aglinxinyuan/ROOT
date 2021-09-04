@@ -8,7 +8,6 @@ function handleMainResult(resultData) {
     $("#time").text(resultData['date'])
     $("#location").text(resultData['location'])
     $("#about").text(resultData['description'])
-
         if (resultData['joined']) {
             btn.addClass('disabled')
             btn.text("Joined")
@@ -18,7 +17,6 @@ function handleMainResult(resultData) {
             btn.click(function() {
                 window.location.replace('activity.html'+window.location.search);
             });
-
         }
 }
 
