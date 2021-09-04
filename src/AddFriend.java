@@ -26,10 +26,13 @@ public class AddFriend extends HttpServlet {
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println("make it here");
         PrintWriter out = response.getWriter();
         response.setStatus(200);
+        System.out.println("make it here");
         User user = (User) request.getSession().getAttribute("user");
-        int friend_id = Integer.parseInt(request.getParameter("friend_id"));
+        int friend_id = Integer.parseInt(request.getParameter("id"));
+
         try (Connection conn = dataSource.getConnection()) {
             String query = "INSERT INTO ezcross.friends(user_id,friend_id) VALUES(?,?);";
             PreparedStatement statement = conn.prepareStatement(query);

@@ -1,14 +1,13 @@
 function handleUserListResult(resultData) {
 
     console.log(resultData);
-
-    let element = $("#userlist");
+    let element = $("#friendlist");
 
     for (let i = 0; i <=resultData.length-1 ; i++) {
         let rowHTML;
         rowHTML ="";
         rowHTML +=
-            '<li style="display: none"><div class="friendBox mb-3 pl-3">'+
+            '<li><div class="friendBox mb-3 pl-3">'+
             '<div class="row">'+
             '<div class="col-3 mt-3 pl-2 pr-0"><img id="person" src="img/alex.png" height=65% alt=""></div>'+
             '<div class="col-9 mt-2 pl-0 pr-0">'+
@@ -52,7 +51,7 @@ function searchFunction() {
         a = li[i].getElementsByTagName("div")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "block";
+            li[i].style.display = "";
         } else {
             li[i].style.display = "none";
         }
