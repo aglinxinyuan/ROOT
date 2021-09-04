@@ -12,6 +12,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -33,9 +34,10 @@ public class DeleteEvent extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
         int id = Integer.parseInt(request.getParameter("id"));
         try (Connection conn = dataSource.getConnection()) {
-            Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("DELETE FROM ezcross.event_user WHERE event_id ="+id+" AND "+ "user_id="+user.GetId()+";");
-            rs.close();
+            String query = "DELETE FROM ezcross.event_user WHERE event_id ="+id+" AND "+ "user_id="+user.GetId()+";";
+            PreparedStatement statement = conn.prepareStatement(query);
+            System.out.println(statement);
+            statement.executeUpdate();
             statement.close();
 
             // set response status to 200 (OK)
