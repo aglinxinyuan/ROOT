@@ -1,6 +1,4 @@
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.ServletConfig;
@@ -13,8 +11,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 @WebServlet(name = "DeleteEvent", urlPatterns = "/api/deleteEvent")
 public class DeleteEvent extends HttpServlet {
@@ -39,13 +35,9 @@ public class DeleteEvent extends HttpServlet {
             System.out.println(statement);
             statement.executeUpdate();
             statement.close();
-
-            // set response status to 200 (OK)
-
             PrintWriter fresh = response.getWriter();
             fresh.write("<html><head><meta http-equiv=\"refresh\" content=\"0; url='../calendar.html'\" /></head></html>");
             response.setStatus(200);
-
         } catch (Exception e) {
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("errorMessage", e.getMessage());
