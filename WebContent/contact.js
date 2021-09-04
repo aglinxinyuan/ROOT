@@ -1,4 +1,4 @@
-function handleUserListResult(resultData) {
+function handleFriendListResult(resultData) {
 
     console.log(resultData);
     let element = $("#friendlist");
@@ -16,7 +16,7 @@ function handleUserListResult(resultData) {
             '<div id="name" class="semiSC_5 ">'+ resultData[i]["name"]+'</div>'+
             '</div>'+
             '<div class="col-6">'+
-            '<a type="button" class="btn addBtn" href="api/addFriend?id='+resultData[i]["id"]+'">Add</a>' +
+            '<button  class="btn addBtn" >Chat</button>' +
             '</div>'+
             '</div>'+
             '<div class="row mt-1">'+
@@ -36,8 +36,8 @@ function handleUserListResult(resultData) {
 $.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "api/userlist", // Setting request url, which is mapped by StarsServlet in Stars.java
-    success: (resultData) => handleUserListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
+    url: "api/friendlist", // Setting request url, which is mapped by StarsServlet in Stars.java
+    success: (resultData) => handleFriendListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
 
 
