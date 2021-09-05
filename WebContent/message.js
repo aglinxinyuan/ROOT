@@ -8,7 +8,8 @@ function handleChatResult(resultData) {
         let rowHTML;
         rowHTML ="";
         rowHTML +=
-            '<li><a type="button" href="chat.html"><div class="chatBox mb-3">'+
+            '<li><a type="button" href="chat.html?='+resultData[i]["id"]+'">' +
+            '<div class="chatBox mb-3">'+
             '<div class="row">'+
             '<div class="col-3 mt-2 pl-2 pr-0"><span class="person"><img id="person" src="img/alex.png" height=65% alt=""></span></div>'+
             '<div class="col-9 mt-2 pl-0 pr-0">'+
