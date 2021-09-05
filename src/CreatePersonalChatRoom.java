@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-@WebServlet(name = "AddFriend", urlPatterns = "/api/addFriend")
+@WebServlet(name = "CreatePersonalChatRoom", urlPatterns = "/api/createChatRoom")
 public class CreatePersonalChatRoom extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private DataSource dataSource;
