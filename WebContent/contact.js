@@ -2,7 +2,6 @@ function handleFriendListResult(resultData) {
 
     console.log(resultData);
     let element = $("#friendlist");
-
     for (let i = 0; i <=resultData.length-1 ; i++) {
         let rowHTML;
         rowHTML ="";
@@ -16,7 +15,7 @@ function handleFriendListResult(resultData) {
             '<div id="name" class="semiSC_5 ">'+ resultData[i]["name"]+'</div>'+
             '</div>'+
             '<div class="col-4">'+
-            '<button  class="btn addBtn" >Chat</button>' +
+            '<a type="button"  class="btn addBtn" href="api/createChatRoom?id='+resultData[i]["id"]+'">Chat</a>' +
             '</div>'+
             '</div>'+
             '<div class="row mt-1">'+
@@ -39,6 +38,11 @@ $.ajax({
     url: "api/friendlist", // Setting request url, which is mapped by StarsServlet in Stars.java
     success: (resultData) => handleFriendListResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
+
+
+function createChatRoom(id){
+
+}
 
 
 function searchFunction() {
