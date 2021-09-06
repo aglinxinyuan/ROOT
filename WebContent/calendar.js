@@ -1,5 +1,6 @@
 function handleCalendarResult(resultData) {
     let element = $("#eventsjoined");
+    console.log(resultData);
 
     // let months = [ "January", "February", "March", "April", "May", "June",
     //     "July", "August", "September", "October", "November", "December" ];
@@ -57,7 +58,12 @@ function handleCalendarResult(resultData) {
 
 function openModal(id,isCreator) {
     $('#ModalEventDeleted').modal('show')
-    $('#delete').html('<a type="button" class="btn greyBtn" href="api/deleteEvent?id='+id+'">Delete</a>')
+    if(isCreator){
+        $('#delete').html('<a type="button" class="btn greyBtn" href="api/deleteEventAsCreator?id='+id+'">Delete</a>')
+    }
+    else{
+        $('#delete').html('<a type="button" class="btn greyBtn" href="api/deleteEvent?id='+id+'">Unjoin</a>')
+    }
 }
 
 $.ajax({

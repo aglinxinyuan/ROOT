@@ -48,14 +48,9 @@ public class GetEventJoined extends HttpServlet {
                 jsonObject.addProperty("date", data.substring(0,4)+data.substring(5,7)+data.substring(8,10));
                 String timedata = rs.getString("time");
                 jsonObject.addProperty("time", timedata.substring(0,5));
-                boolean isCreator = false;
-                if (rs.getString("name").equals(user.GetName())) {
-                    jsonObject.addProperty("isCreator", true);
-                }
-
+//                jsonObject.addProperty("isCreator", false);
+                jsonObject.addProperty("isCreator", rs.getString("creator").equals(user.GetName()));
                 jsonArray.add(jsonObject);
-
-
 
 
             }
