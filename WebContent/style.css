@@ -649,3 +649,8 @@ input:checked + .slider:before {
 li {
     list-style-type: none;
 }
+
+
+a {
+    text-decoration: none;
+}
