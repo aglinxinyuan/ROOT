@@ -49,6 +49,10 @@ public class GetUserList extends HttpServlet {
 //                jsonObject.addProperty("birth", rs.getString("birth"));
 //                jsonObject.addProperty("phone", rs.getString("phone"));
 //                jsonObject.addProperty("aboutme", rs.getString("about me"));
+
+//                ResultSet rs2 = statement.executeQuery("SELECT * FROM ezcross.friends where friend_id="+rs.getInt("id")+" and user_id="+ user.GetId()+";");
+//                jsonObject.addProperty("joined", rs2.next());
+
                 jsonArray.add(jsonObject);
             }
             rs.close();

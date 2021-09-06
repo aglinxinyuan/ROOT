@@ -37,7 +37,7 @@ function handleCalendarResult(resultData) {
                         '<div class="block row">'+
                             '<div class="smallBlock col-6"><img src="img/gym.png" height=90 alt=""></div>'+
                             '<button class="yellowButton col-3"><img src="img/edit.png" height=20 alt=""></button>'+
-                            '<button class="redButton col-3" onclick="openModal('+resultData[i]['id']+')">'+
+                            '<button class="redButton col-3" onclick="openModal('+resultData[i]['id']+','+ resultData[i]['isCreator'] + ')">'+
                                 '<img src="./img/delete.png" height=20 alt=""></button>'+
                         '</div>'+
                     '</div>'+
@@ -55,7 +55,7 @@ function handleCalendarResult(resultData) {
 
 }
 
-function openModal(id) {
+function openModal(id,isCreator) {
     $('#ModalEventDeleted').modal('show')
     $('#delete').html('<a type="button" class="btn greyBtn" href="api/deleteEvent?id='+id+'">Delete</a>')
 }
