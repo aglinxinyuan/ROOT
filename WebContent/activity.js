@@ -1,7 +1,10 @@
 let btn =$('.btn');
 function handleMainResult(resultData) {
-    console.log("this happened 1");
     console.log(resultData);
+
+    const d = new Date();
+    const date = d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0');
+
     $("#activityTitle").text(resultData['title'])
     $("#name").text(resultData['creator'])
     $("#level").text(resultData['skill'])
@@ -13,10 +16,16 @@ function handleMainResult(resultData) {
             btn.text("Joined")
         }
         else{
-            btn.html('<a href="api/join'+window.location.search+'">Join</a>')
-            btn.click(function() {
-                window.location.replace('activity.html'+window.location.search);
-            });
+            if (date>resultData["date"]){
+                btn.addClass('disabled')
+                btn.text("Finished")
+            }
+            else{
+                btn.html('<a href="api/join'+window.location.search+'">Join</a>')
+                btn.click(function() {
+                    window.location.replace('activity.html'+window.location.search);
+                });
+            }
         }
 }
 
