@@ -64,7 +64,7 @@ $("#message_form").keypress(function (e) {
     if (e.which === 13) {
         console.log("formsubmitted");
         $.ajax({
-                url: "api/message",
+                url: "api/message" + window.location.search,
                 method: "POST",
                 data: $("#message_form").serialize(),
                 success: window.location.replace("chat.html")
