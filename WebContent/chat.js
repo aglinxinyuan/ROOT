@@ -54,7 +54,7 @@ function handleChatResult(resultData) {
 $.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method
-    url: "api/chatroom"+ window.location.search, // Setting request url, which is mapped by StarsServlet in Stars.java
+    url: "api/chatroom", // Setting request url, which is mapped by StarsServlet in Stars.java
     success: (resultData) => handleChatResult(resultData) // Setting callback function to handle data returned successfully by the StarsServlet
 });
 
@@ -63,8 +63,8 @@ $.ajax({
 $("#message_form").keypress(function (e) {
     if (e.which === 13) {
         console.log("formsubmitted");
-        $.ajax(
-            "api/message", {
+        $.ajax({
+                url: "api/message",
                 method: "POST",
                 data: $("#message_form").serialize(),
                 success: window.location.replace("chat.html")

@@ -30,8 +30,8 @@ public class SendMessage extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
         String message = request.getParameter("message");
-//        int groupId =1;
-        String groupId = request.getParameter("id");
+        int groupId =1;
+//        int id = Integer.parseInt(request.getParameter("id"));
         System.out.println(groupId);
 //        int groupId = Integer.parseInt(request.getParameter("id"));
         try (Connection conn = dataSource.getConnection()) {
@@ -40,8 +40,8 @@ public class SendMessage extends HttpServlet {
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setInt(1, user.GetId());
             statement.setString(2, message);
-            statement.setInt(3, Integer.parseInt(groupId));
-            System.out.println(statement);
+            statement.setInt(3, groupId);
+//            System.out.println(statement);
 
 
             statement.executeUpdate();

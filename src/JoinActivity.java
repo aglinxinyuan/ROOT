@@ -29,6 +29,7 @@ public class JoinActivity extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
         int id = Integer.parseInt(request.getParameter("id"));
+        System.out.println(id);
         User user = (User) request.getSession().getAttribute("user");
         try (Connection conn = dataSource.getConnection()) {
             String query = "INSERT INTO event_user(event_id,user_id) VALUES(?,?);";
