@@ -30,10 +30,11 @@ public class SendMessage extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
         String message = request.getParameter("message");
-        int groupId =1;
-        int id = Integer.parseInt(request.getParameter("id"));
+//        int groupId =1;
+        int groupId = Integer.parseInt(request.getParameter("id"));
+//        int id = Integer.parseInt(request.getParameter("id"));
+//        System.out.println(groupId);
         System.out.println(groupId);
-        System.out.println(id);
 //        int groupId = Integer.parseInt(request.getParameter("id"));
         try (Connection conn = dataSource.getConnection()) {
             User user = (User) request.getSession().getAttribute("user");
