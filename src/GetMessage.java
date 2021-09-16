@@ -30,10 +30,11 @@ public class GetMessage extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter out = response.getWriter();
         response.setStatus(200);
+        String groupID= request.getParameter("id");
         try (Connection conn = dataSource.getConnection()) {
             Statement statement = conn.createStatement();
             User user = (User) request.getSession().getAttribute("user");
-            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.message;");
+            ResultSet rs = statement.executeQuery("SELECT * FROM ezcross.message WHERE group_id ="+groupID+";");
             JsonArray jsonArray = new JsonArray();
 
             // Iterate through each row of rs

@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 @WebServlet(name = "CreatePersonalChatRoom", urlPatterns = "/api/createChatRoom")
 public class CreatePersonalChatRoom extends HttpServlet {
@@ -26,17 +28,21 @@ public class CreatePersonalChatRoom extends HttpServlet {
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("make it here");
         PrintWriter out = response.getWriter();
         response.setStatus(200);
-        System.out.println("make it here");
         User user = (User) request.getSession().getAttribute("user");
         int friend_id = Integer.parseInt(request.getParameter("id"));
 
         try (Connection conn = dataSource.getConnection()) {
+//            Statement statement1 = conn.createStatement();
+//            ResultSet rs = statement1.executeQuery("SELECT name FROM ezcross.user WHERE id="+ friend_id +";");
+//            String friend_name = rs.getString(1);
+//            rs.close();
+//            statement1.close();
+
             String query = "INSERT INTO ezcross.group(name) VALUES(?);";
             PreparedStatement statement = conn.prepareStatement(query);
-            statement.setString(1, user.GetName()+"s chat room");
+            statement.setString(1, friend_id+"'s chatroom");
             statement.executeUpdate();
             statement.close();
 
