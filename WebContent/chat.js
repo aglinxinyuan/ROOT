@@ -27,7 +27,7 @@ function handleChatResult(resultData) {
         '<div class="row ml-0 pt-4">'+
         '<div class="col-3 mt-4" > <a HREF="message.html"><img class ="back" src="img/whiteback.png" height = 13 alt=""></a></div>' +
          '<div class="col-6 mt-3 mb-3" > <div class="title_centered_white ">testname here</div></div>'+
-         '<div class="col-3 mt-4" > <a HREF="chatmanage.html'+ window.location.search +'"><img src="img/more.png" height = 6 alt=""></a></div>'+
+         '<div class="col-3 mt-4" > <a HREF="chatmanage.html?id='+ window.location +'"><img src="img/more.png" height = 6 alt=""></a></div>'+
          '</div>'+
          '</div>'
     elementTop.append(rowHTMLTop);
