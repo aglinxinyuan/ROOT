@@ -2,11 +2,12 @@
 function handleCalendarResult(resultData) {
 
         console.log(resultData);
-        let id=parseInt(window.location.search.substring(4,1));
+        // let id=parseInt(window.location.search.substring(3,1));
+        let id=window.location.search.substring(4);
         console.log(id);
 
         let rowHTML;
-            let element = $("#eventsjoined");
+            let element = $("#deleteChatRoom");
             rowHTML = '<li> <div class="eventDetial row">';
             rowHTML +=
                 '<button class="button" onclick="openModal('+id+')">'+
@@ -25,6 +26,8 @@ function openModal(id) {
 
 }
 
+
+// this should be use to pull specific user info
 $.ajax({
     dataType: "json", // Setting return data type
     method: "GET", // Setting request method

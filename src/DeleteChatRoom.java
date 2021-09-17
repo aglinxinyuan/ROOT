@@ -32,7 +32,7 @@ public class DeleteChatRoom extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         System.out.println(id);
         try (Connection conn = dataSource.getConnection()) {
-            String query = "DELETE FROM ezcross.group_user WHERE id ="+id+" AND user_id="+user.GetId()+ ";";
+            String query = "DELETE FROM ezcross.group_user WHERE group_id ="+id+" AND user_id="+user.GetId()+ ";";
             PreparedStatement statement = conn.prepareStatement(query);
             System.out.println(statement);
             statement.executeUpdate();
