@@ -34,15 +34,11 @@ public class CreatePersonalChatRoom extends HttpServlet {
         int friend_id = Integer.parseInt(request.getParameter("id"));
 
         try (Connection conn = dataSource.getConnection()) {
-//            Statement statement1 = conn.createStatement();
-//            ResultSet rs = statement1.executeQuery("SELECT name FROM ezcross.user WHERE id="+ friend_id +";");
-//            String friend_name = rs.getString(1);
-//            rs.close();
-//            statement1.close();
+            String friend_name = "SELECT name FROM ezcross.user WHERE id="+ friend_id + ";";
 
             String query = "INSERT INTO ezcross.group(name) VALUES(?);";
             PreparedStatement statement = conn.prepareStatement(query);
-            statement.setString(1, friend_id+"'s chatroom");
+            statement.setString(1, friend_name+"'s chatroom");
             statement.executeUpdate();
             statement.close();
 

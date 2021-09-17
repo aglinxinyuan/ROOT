@@ -22,7 +22,7 @@ function handleCalendarResult(resultData) {
 
 function openModal(id) {
     $('#ModalDelete').modal('show')
-        $('#delete').html('<a type="button" class="btn" href="api/deleteChatRoom?id='+id+'">Delete</a>')
+        $('#delete').html('<a class= "semiSC_6" type="button" class="btn" href="api/deleteChatRoom?id='+id+'">Delete</a>')
 
 }
 
