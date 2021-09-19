@@ -57,7 +57,7 @@ public class CreatePersonalChatRoom extends HttpServlet {
             statement.executeUpdate();
             statement.close();
 
-            query = "INSERT INTO ezcross.group_user(group_id,user_id) VALUES(last_insert_id(),?);";                                                                                                     
+            query = "INSERT INTO ezcross.group_user(group_id,user_id) VALUES(last_insert_id(),?);";
             statement = conn.prepareStatement(query);
             statement.setInt(1, friend_id);
             statement.executeUpdate();
